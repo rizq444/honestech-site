@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HONESTECH MOBILE MECHANIC</title>
+  <meta name="description" content="Honestech Mobile Mechanic — Toyota & Lexus specialist. Brakes & tune‑ups brought to your driveway.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Honestech logo" class="logo">
+        <div class="brand-text">
+          <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
+          <p class="tagline">Toyota & Lexus specialist · 25+ years</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-solid" href="tel:+17329373734">Call / Text: (732) 937‑3734</a>
+        <a class="btn btn-outline" href="mailto:honestechservice@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h2>Expert service at your driveway.</h2>
+          <p>Brake and tune‑up services done right — when it fits your schedule. <strong>Labor: $100/hr</strong>. <strong>Appointments start after 5:00 PM.</strong></p>
+          <ul class="bullets">
+            <li>Upfront pricing</li>
+            <li>On‑site service</li>
+            <li>Specializing in Toyota & Lexus</li>
+          </ul>
+          <a href="#book" class="btn btn-solid">Book an appointment</a>
+        </div>
+        <div class="hero-card">
+          <h3>Have your parts ready</h3>
+          <p class="muted">Please verify parts fit your vehicle.</p>
+          <div class="parts">
+            <h4>Brakes</h4>
+            <ul>
+              <li>Brake pads (front or rear)</li>
+              <li>Rotors ×2 (front or rear)</li>
+              <li>Shim/Hardware kit</li>
+            </ul>
+            <h4>Tune‑Up</h4>
+            <ul>
+              <li>Wiper blades (front & rear if equipped)</li>
+              <li>Engine air filter</li>
+              <li>Cabin air filter (if equipped)</li>
+              <li>Spark plugs (4, 6, or 8)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <h2>Services available</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Brake Service</h3>
+            <p>Pad & rotor replacement (front or rear), hardware install, torque to spec, brake-bed procedure guidance.</p>
+          </article>
+          <article class="card">
+            <h3>Tune‑Up</h3>
+            <p>Plugs, filters, and wipers replacement. Visual inspection and codes scan upon request.</p>
+          </article>
+          <article class="card">
+            <h3>Evening Appointments</h3>
+            <p>Weekday slots after 5:00 PM for convenience. Limited weekend availability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="wrap">
+        <h2>Book an appointment</h2>
+        <p class="muted">Pick a time <strong>after 5:00 PM</strong>. You’ll get an immediate calendar file and a prefilled email to confirm. We’ll reply with a firm time.</p>
+        <form id="bookingForm" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" autocomplete="name" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" inputmode="tel" placeholder="(###) ###‑####" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Brake Service (Front)</option>
+                <option>Brake Service (Rear)</option>
+                <option>Tune‑Up</option>
+                <option>Diagnostic / Inspection</option>
+              </select>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="vehicle">Vehicle (Year · Make · Model)</label>
+              <input id="vehicle" name="vehicle" placeholder="e.g., 2016 Lexus IS 300" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="address">Service address</label>
+              <input id="address" name="address" placeholder="Street, City, ZIP" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required>
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="time">Preferred time (after 5:00 PM)</label>
+              <input id="time" name="time" type="time" step="1800" required>
+              <small class="err"></small>
+            </div>
+            <div class="field field-span">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Anything we should know? (ABS light, noises, special wheels, etc.)"></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-solid">Request appointment</button>
+            <button type="reset" class="btn btn-ghost">Clear</button>
+          </div>
+        <p id="serverlessStatus" class="muted small" style="margin-top:8px;"></p>
+</form>
+
+        <div id="result" class="result" hidden>
+          <h3>You're all set!</h3>
+          <p>We created a calendar file and a prefilled email. Please send the email to finalize your request.</p>
+          <div class="result-actions">
+            <a id="downloadIcs" class="btn btn-outline" download>Download calendar (.ics)</a>
+            <a id="googleCal" class="btn btn-outline" target="_blank" rel="noopener">Add to Google Calendar</a>
+            <a id="mailto" class="btn btn-solid">Open email draft</a>
+          </div>
+          <p class="muted small">We’ll confirm by text or email. Labor: $100/hr. You supply parts.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+17329373734">(732) 937‑3734</a><br>
+        <a href="mailto:honestechservice@gmail.com">honestechservice@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Weekdays after 5:00 PM · Limited weekends</p>
+      </div>
+      <div>
+        <h4>Service Area</h4>
+        <p>Greater Central NJ (mobile)</p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Honestech Mobile Mechanic</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
