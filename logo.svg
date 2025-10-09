@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Honestech">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffd000"/>
+      <stop offset="1" stop-color="#ffea70"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="28" fill="#0b0b0c"/>
+  <g transform="translate(20,20)">
+    <rect x="0" y="80" width="200" height="60" rx="10" fill="url(#g)" />
+    <circle cx="40" cy="160" r="20" fill="#ffd000" />
+    <circle cx="160" cy="160" r="20" fill="#ffd000" />
+    <rect x="40" y="60" width="120" height="20" rx="4" fill="#ffd000" />
+  </g>
+  <text x="120" y="35" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#ffd000">HONESTECH</text>
+</svg>
