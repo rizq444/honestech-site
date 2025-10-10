@@ -23,17 +23,24 @@ body{
 .wrap{max-width:1100px;margin:0 auto;padding:24px;}
 
 .site-header{
-  border-bottom:1px solid #1f1f23;
-  background:rgba(0,0,0,.35);
-  backdrop-filter: blur(6px);
+  border-bottom:0;
+  background: linear-gradient(180deg, #17171A 0%, #0F0F12 100%);
   position:sticky; top:0; z-index:50;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+}
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0; height:3px;
+  background: linear-gradient(90deg, transparent 0%, var(--brand) 15%, var(--brand) 85%, transparent 100%);
+  opacity:.9;
 }
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:16px}
-.logo{width:64px;height:64px}
+.logo{width:84px;height:84px;object-fit:contain}
 .brand h1{margin:0;line-height:1}
 .brand h1 span{font-weight:600;font-size:.8em;letter-spacing:.08em}
-.tagline{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
+.tagline{margin:.3rem 0 0;color:var(--muted);font-size:1.05rem;letter-spacing:.02em}
 
 .btn{
   display:inline-block;

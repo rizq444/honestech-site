@@ -1,4 +1,4 @@
-// Booking + FormSubmit (no account needed) + calendar/email fallbacks
+// Booking + FormSubmit (no account) + calendar/email fallbacks
 (function(){
   const form = document.getElementById('bookingForm');
   const resultBox = document.getElementById('result');
@@ -6,12 +6,11 @@
   const googleCal = document.getElementById('googleCal');
   const mailto = document.getElementById('mailto');
   const year = document.getElementById('year');
-  const statusEl = document.getElementById('serverlessStatus') || document.createElement('p');
+  const statusEl = document.getElementById('serverlessStatus');
   year.textContent = new Date().getFullYear();
 
   // === CONFIG ===
   // FormSubmit AJAX endpoint (sends emails to honestechservice@gmail.com)
-  // Docs: https://formsubmit.co/
   const FORM_ENDPOINT = "https://formsubmit.co/ajax/honestechservice@gmail.com";
   const ENABLE_SERVERLESS = true;
 
@@ -162,12 +161,11 @@
 
   async function postServerless(payload){
     if(!ENABLE_SERVERLESS){
-      statusEl.textContent = "Tip: add your endpoint to enable direct submissions.";
+      statusEl.textContent = "Tip: add an endpoint to enable direct submissions.";
       return { ok:false, skipped:true };
     }
     statusEl.textContent = "Submitting…";
     try{
-      // FormSubmit accepts JSON at /ajax. It also supports special fields like _subject.
       const r = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -203,8 +201,10 @@
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
-    if(!validate()) return;
-    if(honeypot.value) return; // bot? silently drop
+    // Basic validation
+    let ok = true;
+    if(!validate()) ok = false;
+    if(!ok) return;
 
     const data = Object.fromEntries(new FormData(form).entries());
     const [h,m] = data.time.split(':').map(Number);
@@ -225,7 +225,7 @@
     // Mailto backup
     mailto.href = buildMailto(data);
 
-    // Persist for user's reference
+    // Persist locally
     const key = 'honestech_appointments';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     existing.push({
@@ -235,7 +235,7 @@
     });
     localStorage.setItem(key, JSON.stringify(existing));
 
-    // Serverless submission via FormSubmit
+    // Serverless submission
     const payload = {
       service: data.service,
       date: data.date,
