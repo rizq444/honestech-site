@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HONESTECH MOBILE MECHANIC</title>
-  <meta name="description" content="Honestech Mobile Mechanic — Honest, reliable mobile auto service.">
+  <meta name="description" content="Honestech Mobile Mechanic — Honest, reliable mobile auto service. Book online or call (732) 937-3734.">
+  <meta name="theme-color" content="#ffd000">
+
+  <!-- Favicon (simple H badge) -->
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="%230b0b0c"/><circle cx="32" cy="32" r="28" fill="none" stroke="%23ffd000" stroke-width="3.5"/><text x="50%25" y="50%25" text-anchor="middle" dominant-baseline="central" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial" font-size="42" font-weight="700" fill="%23ffd000">H</text></svg>'>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&display=swap" rel="stylesheet">
@@ -77,6 +83,14 @@
             <h3>Evening Appointments</h3>
             <p>Weekday slots after 5:00 PM for convenience. Limited weekend availability.</p>
           </article>
+          <article class="card">
+            <h3>Roadside Assistance — Middlesex County</h3>
+            <p>Available within Middlesex County. Outside the county: <strong>$1 per mile</strong> from the county line.</p>
+            <ul class="bullets">
+              <li>JUMP STARTS</li>
+              <li>FLAT TIRE CHANGE</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -85,6 +99,7 @@
       <div class="wrap">
         <h2>Book an appointment</h2>
         <p class="muted">Pick a time <strong>after 5:00 PM</strong>. You’ll get an immediate calendar file and a prefilled email to confirm. We’ll reply with a firm time.</p>
+
         <form id="bookingForm" novalidate>
           <div class="grid">
             <div class="field">
@@ -110,6 +125,8 @@
                 <option>Brake Service (Rear)</option>
                 <option>Tune-Up</option>
                 <option>Diagnostic / Inspection</option>
+                <option>Roadside Assistance — Jump Start</option>
+                <option>Roadside Assistance — Flat Tire Change</option>
               </select>
               <small class="err"></small>
             </div>
@@ -143,6 +160,7 @@
             <button type="submit" class="btn btn-solid">Request appointment</button>
             <button type="reset" class="btn btn-ghost">Clear</button>
           </div>
+          <p class="muted small">Roadside outside Middlesex County is billed at <strong>$1 per mile</strong> from the county line.</p>
           <p id="serverlessStatus" class="muted small" style="margin-top:8px;"></p>
         </form>
 
