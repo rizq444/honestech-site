@@ -89,3 +89,48 @@ img,svg{max-width:100%;height:auto}
   .actions .btn{width:100%}
   .tagline{letter-spacing:.01em}
 }
+/* Hamburger & Drawer */
+.nav-toggle{
+  display:none; /* default hidden (desktop) */
+  position:relative; z-index:1001;
+  width:44px; height:44px; border:1px solid #2a2a2f; border-radius:10px;
+  background:#101014; cursor:pointer; padding:10px;
+}
+.nav-toggle .bar{
+  display:block; height:2px; background:#ffd000; margin:5px 0; transition:.2s;
+}
+
+/* Drawer panel */
+.nav-panel{
+  position:fixed; top:0; left:0; height:100vh; width:78%;
+  max-width:320px; background:#0e0e11; border-right:1px solid #1f1f23;
+  transform:translateX(-100%); transition:transform .25s ease; z-index:1000; padding:16px;
+  box-shadow: 12px 0 30px rgba(0,0,0,.35);
+}
+.nav-menu{display:flex; flex-direction:column; gap:10px; margin-top:8px}
+.nav-menu a{
+  display:block; padding:12px 10px; border:1px solid #26262a; border-radius:10px;
+  text-decoration:none; color:#f7f7f8; background:#121214;
+}
+.nav-menu a:hover{border-color:#ffd000}
+
+/* Backdrop */
+.nav-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:999;
+}
+
+/* Open states (applied by JS) */
+.nav-open .nav-panel{ transform:none }
+.nav-open #navBackdrop{ display:block }
+.nav-open #navToggle .bar:nth-child(1){ transform:translateY(7px) rotate(45deg) }
+.nav-open #navToggle .bar:nth-child(2){ opacity:0 }
+.nav-open #navToggle .bar:nth-child(3){ transform:translateY(-7px) rotate(-45deg) }
+
+/* Mobile layout: show hamburger, hide big CTA buttons */
+@media (max-width: 900px){
+  .nav-toggle{ display:inline-block }
+  .cta{ display:none }            /* hides the big header buttons on phones */
+}
+
+/* Optional: keep brand/logo from shifting when button appears */
+.site-header .wrap{ align-items:center }
