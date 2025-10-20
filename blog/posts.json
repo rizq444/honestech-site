@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "brake-pads-guide",
+    "title": "How to Pick the Right Brake Pads",
+    "date": "2025-10-01",
+    "summary": "Organic vs semi-metallic vs ceramic — quick breakdown for Middlesex County driving.",
+    "tags": ["Brakes", "Parts"],
+    "content": "<p><strong>Organic</strong> = soft feel, low cost, more dust. <strong>Semi-metallic</strong> = great bite, may squeal. <strong>Ceramic</strong> = clean & quiet, higher price. Pair pads with new rotors when rotors are worn to avoid vibration.</p>"
+  },
+  {
+    "slug": "oil-change-checklist",
+    "title": "Oil Change: What You Bring, What We Do",
+    "date": "2025-09-12",
+    "summary": "You supply the correct oil grade and filter; we handle the swap neatly.",
+    "tags": ["Oil", "Maintenance"],
+    "content": "<ul><li>Correct oil grade & quantity</li><li>Oil filter (right thread/gasket)</li><li>Drain plug washer (if required)</li></ul><p>We refill, torque to spec, and reset the light when supported.</p>"
+  },
+  {
+    "slug": "battery-jump-checklist",
+    "title": "Dead Battery? When Jumping Works",
+    "date": "2025-08-20",
+    "summary": "Signs a jump will help vs. when you likely need a battery.",
+    "tags": ["Roadside", "Electrical"],
+    "content": "<p>If it dies again soon after jumping, the alternator or battery may be weak. Check terminals for corrosion and battery age.</p>"
+  }
+]
