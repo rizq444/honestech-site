@@ -1,1 +1,35 @@
-<!-- locations.html with hamburger nav integrated -->
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Service Locations — Honestech</title><meta name='description' content='Middlesex County, NJ primary coverage; $1/mi outside county.'><link rel='stylesheet' href='styles.css'><style>.hero-map{padding:24px 0}.map{aspect-ratio:16/9;width:100%;border:0;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.35);} .grid-2{display:grid;grid-template-columns:2fr 1fr;gap:20px}.chip{display:inline-block;margin:4px 6px;padding:8px 10px;border:1px solid #2a2a2f;border-radius:999px;background:#101014}@media(max-width:900px){.grid-2{grid-template-columns:1fr}}</style></head><body>
+<header class="site-header">
+  <div class="wrap">
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand">
+      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech Mobile Mechanic Logo" class="logo" />
+      <div class="brand-text">
+        <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
+        <p class="tagline">Honest, reliable service at your driveway.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-outline" href="/about.html">About</a>
+      <a class="btn btn-outline" href="/locations.html">Locations</a>
+      <a class="btn btn-outline" href="/blogs.html">Blogs</a>
+      <a class="btn btn-outline" href="/app/">Open the App</a>
+      <a class="btn btn-solid" href="tel:+17329373734">Call / Text: (732) 937-3734</a>
+    </div>
+  </div>
+</header>
+<div id="navPanel" class="nav-panel" role="dialog" aria-modal="true" aria-hidden="true">
+  <nav class="nav-menu" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/locations.html">Locations</a>
+    <a href="/blogs.html">Blogs</a>
+    <a href="tel:+17329373734">Call (732) 937-3734</a>
+    <a href="mailto:honestechservice@gmail.com">Email</a>
+    <a href="/app/">Open the App</a>
+  </nav>
+</div>
+<div id="navBackdrop" class="nav-backdrop" hidden></div>
+<main class='wrap hero-map'><div class='grid-2'><div><h2>Where we serve</h2><p class='muted'>Primary coverage is <strong>Middlesex County, NJ</strong>. Outside the county, mobile service is available at <strong>$1 per mile</strong> from the county line.</p><iframe class='map' loading='lazy' src='https://www.google.com/maps?q=Middlesex%20County%2C%20NJ&output=embed'></iframe></div><aside><h3>Popular towns (Middlesex)</h3><div><span class='chip'>Edison</span><span class='chip'>Woodbridge</span><span class='chip'>Perth Amboy</span><span class='chip'>Sayreville</span><span class='chip'>Old Bridge</span><span class='chip'>East Brunswick</span><span class='chip'>South Brunswick</span><span class='chip'>North Brunswick</span><span class='chip'>New Brunswick</span><span class='chip'>Piscataway</span><span class='chip'>Metuchen</span><span class='chip'>Highland Park</span></div><p class='muted' style='margin-top:8px'>Nearby on request: parts of <em>Somerset, Union, Monmouth, Mercer</em>.</p></aside></div></main><footer class='site-footer'><div class='wrap footer-grid'><div><h4>Contact</h4><p><a href='tel:+17329373734'>(732) 937-3734</a><br><a href='mailto:honestechservice@gmail.com'>honestechservice@gmail.com</a></p></div><div><h4>Hours</h4><p>Weekdays after 5:00 PM · Limited weekends</p></div><div><h4>Service Area</h4><p>Primary: Middlesex County, NJ</p></div></div><p class='copyright'>© <span id='year'></span> Honestech Mobile Mechanic</p></footer><script src='script.js'></script><script>var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();</script></body></html>

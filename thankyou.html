@@ -1,1 +1,35 @@
-<!-- thankyou.html with hamburger nav integrated -->
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Thank you — Honestech</title><meta name='theme-color' content='#ffd000'><link rel='stylesheet' href='styles.css'><style>main{min-height:60vh;display:grid;place-items:center;text-align:center}.card{background:var(--panel);border:1px solid #1f1f23;border-radius:16px;padding:28px;max-width:640px}</style></head><body>
+<header class="site-header">
+  <div class="wrap">
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand">
+      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech Mobile Mechanic Logo" class="logo" />
+      <div class="brand-text">
+        <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
+        <p class="tagline">Honest, reliable service at your driveway.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-outline" href="/about.html">About</a>
+      <a class="btn btn-outline" href="/locations.html">Locations</a>
+      <a class="btn btn-outline" href="/blogs.html">Blogs</a>
+      <a class="btn btn-outline" href="/app/">Open the App</a>
+      <a class="btn btn-solid" href="tel:+17329373734">Call / Text: (732) 937-3734</a>
+    </div>
+  </div>
+</header>
+<div id="navPanel" class="nav-panel" role="dialog" aria-modal="true" aria-hidden="true">
+  <nav class="nav-menu" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/locations.html">Locations</a>
+    <a href="/blogs.html">Blogs</a>
+    <a href="tel:+17329373734">Call (732) 937-3734</a>
+    <a href="mailto:honestechservice@gmail.com">Email</a>
+    <a href="/app/">Open the App</a>
+  </nav>
+</div>
+<div id="navBackdrop" class="nav-backdrop" hidden></div>
+<main><div class='wrap'><div class='card'><h2>Thanks — we got your request!</h2><p class='muted'>We’ll review your details and contact you shortly to confirm a time.</p><p><a class='btn btn-solid' href='/'>Return Home</a> <a class='btn btn-outline' href='/locations.html'>Locations</a> <a class='btn btn-outline' href='/blogs.html'>Blogs</a> <a class='btn btn-outline' href='/app/'>Open the App</a></p></div></div></main><footer class='site-footer'><div class='wrap'><p class='copyright'>© <span id='year'></span> Honestech Mobile Mechanic</p></div></footer><script src='script.js'></script><script>var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();</script></body></html>
