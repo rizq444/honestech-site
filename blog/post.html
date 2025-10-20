@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post — Honestech</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .article{max-width:800px;margin:0 auto;background:#121214;border:1px solid #1f1f23;border-radius:16px;padding:22px}
+    .breadcrumbs a{color:#ffd000;text-decoration:none}
+    .breadcrumbs{margin-bottom:10px;color:#bdbdbf}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" class="logo" alt="Honestech" />
+      <div class="brand-text"><h1>HONESTECH<br><span>Mobile Mechanic</span></h1></div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-outline" href="/">Home</a>
+      <a class="btn btn-outline" href="/blogs.html">Blogs</a>
+      <a class="btn btn-solid" href="/#book">Book</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="article">
+    <p class="breadcrumbs"><a href="/blogs.html">← Back to Blogs</a></p>
+    <h2 id="title">Loading…</h2>
+    <p class="muted"><time id="date"></time> · <span id="tags"></span></p>
+    <div id="content"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><h4>Contact</h4><p><a href="tel:+17329373734">(732) 937-3734</a><br><a href="mailto:honestechservice@gmail.com">honestechservice@gmail.com</a></p></div>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug');
+  try{
+    const posts = await (await fetch('/blog/posts.json', {cache:'no-store'})).json();
+    const p = posts.find(x => x.slug === slug);
+    if(!p){ document.getElementById('title').textContent = 'Post not found'; return; }
+    document.title = p.title + ' — Honestech';
+    document.getElementById('title').textContent = p.title;
+    document.getElementById('date').textContent =
+      new Date(p.date).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});
+    document.getElementById('tags').innerHTML = (p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join(' ');
+    document.getElementById('content').innerHTML = p.content;
+  }catch(e){
+    document.getElementById('title').textContent = 'Could not load post';
+  }
+})();
+</script>
+</body>
+</html>
