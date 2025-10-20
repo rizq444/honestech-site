@@ -10,6 +10,24 @@
 </head>
 <body>
 <header class="site-header">
+  <!-- HAMBURGER + DRAWER -->
+<button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+  <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</button>
+
+<div id="navPanel" class="nav-panel" role="dialog" aria-modal="true" aria-hidden="true">
+  <nav class="nav-menu" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/locations.html">Locations</a>
+    <a href="/blogs.html">Blogs</a>
+    <a href="tel:+17329373734">Call (732) 937-3734</a>
+    <a href="mailto:honestechservice@gmail.com">Email</a>
+    <a href="/app/">Open the App</a>
+  </nav>
+</div>
+
+<div id="navBackdrop" class="nav-backdrop" hidden></div>
   <div class="wrap">
     <div class="brand">
       <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech Mobile Mechanic Logo" class="logo" />
