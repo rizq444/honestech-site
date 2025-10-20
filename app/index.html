@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honestech Appointments</title>
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img class="logo" src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech" />
+      <div><h1>Honestech</h1><p class="muted">Mobile Mechanic</p></div>
+    </div>
+    <nav><a class="admin-link" href="admin.html" aria-label="Admin">Admin</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Book an appointment</h2>
+      <p class="muted">Weekdays after 5:00 PM · Labor $100/hr · Customer provides parts (and oil/filter for oil change).</p>
+
+      <form id="apptForm" novalidate>
+        <div class="grid">
+          <label>Full Name <input name="name" required autocomplete="name" /></label>
+          <label>Phone <input name="phone" inputmode="tel" placeholder="(###) ###-####" required /></label>
+          <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+
+          <label>Service
+            <select name="service" required>
+              <option value="">Select…</option>
+              <option>Brake Service (Front)</option>
+              <option>Brake Service (Rear)</option>
+              <option>Tune-Up</option>
+              <option>Oil Change (Customer provides oil & filter)</option>
+              <option>Diagnostic / Inspection</option>
+              <option>Roadside Assistance — Jump Start</option>
+              <option>Roadside Assistance — Flat Tire Change</option>
+            </select>
+          </label>
+
+          <label>Vehicle (Year · Make · Model)
+            <input name="vehicle" placeholder="e.g., 2016 Lexus IS 300" required />
+          </label>
+          <label>Service Address
+            <input name="address" placeholder="Street, City, ZIP" required />
+          </label>
+          <label>Preferred Date <input name="date" type="date" required /></label>
+          <label>Preferred Time (after 5:00 PM) <input name="time" type="time" step="1800" required /></label>
+          <label class="span">Notes <textarea name="notes" rows="3" placeholder="Anything we should know?"></textarea></label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Request Appointment</button>
+          <button class="btn" type="reset">Clear</button>
+        </div>
+
+        <p id="status" class="muted"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3>Quick contact</h3>
+      <p><a href="tel:+17329373734" class="btn">Call / Text: (732) 937-3734</a></p>
+      <p><a href="mailto:honestechservice@gmail.com" class="btn">Email</a></p>
+    </section>
+  </main>
+
+  <footer class="foot"><p>© <span id="year"></span> Honestech Mobile Mechanic</p></footer>
+  <script src="main.js"></script>
+</body>
+</html>
