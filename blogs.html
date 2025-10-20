@@ -1,1 +1,72 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Blogs — Honestech</title><link rel='stylesheet' href='styles.css'></head><body><header class='site-header'><div class='wrap'><a class='btn' href='/'>Home</a><a class='btn' href='/locations.html'>Locations</a><a class='btn' href='/app/'>App</a></div></header><main class='wrap'><h2>Blogs</h2><div class='post-grid'><article class='post'><h3>How to Pick the Right Brake Pads</h3><time>Oct 1, 2025</time><p>Organic vs semi‑metallic vs ceramic — quick breakdown.</p></article><article class='post'><h3>Oil Change: What You Bring, What We Do</h3><time>Sep 12, 2025</time><p>You supply correct oil grade and filter; we handle the rest.</p></article><article class='post'><h3>Dead Battery? When Jumping Works</h3><time>Aug 20, 2025</time><p>Signs the battery is done and what to check first.</p></article></div></main><footer class='site-footer'><div class='wrap footer-grid'><div><h4>Contact</h4><p><a href='tel:+17329373734'>(732) 937-3734</a><br><a href='mailto:honestechservice@gmail.com'>honestechservice@gmail.com</a></p></div><div><h4>More</h4><p><a href='/locations.html'>Locations</a> • <a href='/app/'>App</a></p></div></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blogs — Honestech Mobile Mechanic</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .post{background:#121214;border:1px solid #1f1f23;border-radius:16px;padding:18px}
+    .post h3{margin:.2rem 0}
+    .post a{color:#ffd000;text-decoration:none}
+    .post a:hover{text-decoration:underline}
+    .tag{border:1px solid #2a2a2f;padding:4px 8px;border-radius:999px;color:#bdbdbf;margin-right:6px}
+    @media (max-width:900px){.post-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" class="logo" alt="Honestech" />
+      <div class="brand-text"><h1>HONESTECH<br><span>Mobile Mechanic</span></h1></div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-outline" href="/">Home</a>
+      <a class="btn btn-outline" href="/locations.html">Locations</a>
+      <a class="btn btn-solid" href="/#book">Book</a>
+      <a class="btn btn-outline" href="/app/">Open the App</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Blogs</h2>
+  <p class="muted">Car care tips and quick guides. Tap a post to read.</p>
+  <div id="blog-list" class="post-grid"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><h4>Contact</h4><p><a href="tel:+17329373734">(732) 937-3734</a><br><a href="mailto:honestechservice@gmail.com">honestechservice@gmail.com</a></p></div>
+    <div><h4>More</h4><p><a href="/locations.html">Locations</a> · <a href="/app/">App</a></p></div>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  try {
+    const res = await fetch('/blog/posts.json', {cache:'no-store'});
+    const posts = await res.json();
+    const list = document.getElementById('blog-list');
+    if (!Array.isArray(posts) || !posts.length) {
+      list.innerHTML = '<p class="muted">No posts yet.</p>';
+      return;
+    }
+    list.innerHTML = posts.map(p => `
+      <article class="post">
+        <time datetime="${p.date}">${new Date(p.date).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})}</time>
+        <h3><a href="/blog/post.html?slug=${encodeURIComponent(p.slug)}">${p.title}</a></h3>
+        <p>${p.summary}</p>
+        <p>${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</p>
+        <p><a href="/blog/post.html?slug=${encodeURIComponent(p.slug)}">Read more →</a></p>
+      </article>
+    `).join('');
+  } catch(e){
+    document.getElementById('blog-list').innerHTML = '<p class="muted">Could not load posts.</p>';
+  }
+})();
+</script>
+</body>
+</html>
