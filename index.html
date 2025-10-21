@@ -1,4 +1,37 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>HONESTECH MOBILE MECHANIC</title><meta name='description' content='Honestech Mobile Mechanic — Honest, reliable mobile auto service. Book online or call (732) 937-3734.'><meta name='theme-color' content='#ffd000'><link rel='stylesheet' href='styles.css'></head><body>
+<!doctype html><html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>HONESTECH MOBILE MECHANIC</title>
+<meta name='description' content='Honestech Mobile Mechanic — Honest, reliable mobile auto service. Book online or call (732) 937-3734.'>
+<meta name='theme-color' content='#ffd000'>
+<link rel='stylesheet' href='styles.css'>
+
+<!-- Minimal modal styles (can move to styles.css if you prefer) -->
+<style>
+:root{--bg:#0b0b0b;--panel:#111214;--gold:#d4af37;--muted:#a9a9a9;--text:#f5f5f5;--border:#2a2a2a}
+.btn-primary{background:var(--gold);color:#111;font-weight:700;border:none;border-radius:10px;padding:12px 16px;cursor:pointer}
+.btn-primary[disabled]{opacity:.6;cursor:not-allowed}
+.btn-secondary{background:#1a1c20;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:12px 16px;cursor:pointer}
+.ht-modal{position:fixed;inset:0;display:none;z-index:9999}
+.ht-modal.is-open{display:block}
+.ht-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.ht-modal__dialog{position:relative;margin:6vh auto 0;max-width:560px;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.5);width:clamp(300px,92vw,560px)}
+.ht-modal__close{position:absolute;top:10px;right:10px;background:transparent;color:var(--muted);border:none;font-size:20px;cursor:pointer}
+.ht-modal__header h2{margin:0 0 6px;color:var(--gold);font-size:22px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.ht-modal__body{margin:10px 0 12px;max-height:46vh;overflow:auto;padding-right:4px}
+.summary{margin:0 0 12px 18px}
+.agree{display:flex;gap:8px;align-items:flex-start;margin-top:8px}
+.agree a{color:#ffd76a}
+.ht-modal__footer{display:flex;justify-content:flex-end;gap:10px}
+@media (prefers-color-scheme: light){
+  :root{--bg:#fff;--panel:#fafafa;--text:#141414;--border:#e7e7e7;--muted:#555}
+}
+</style>
+</head>
+<body>
 <header class="site-header">
   <div class="wrap">
     <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
@@ -20,6 +53,7 @@
     </div>
   </div>
 </header>
+
 <div id="navPanel" class="nav-panel" role="dialog" aria-modal="true" aria-hidden="true">
   <nav class="nav-menu" aria-label="Site">
     <a href="/">Home</a>
@@ -32,4 +66,252 @@
   </nav>
 </div>
 <div id="navBackdrop" class="nav-backdrop" hidden></div>
-<main><section class='hero'><div class='wrap hero-grid'><div><h2>Expert service at your driveway.</h2><p>Brake, tune-up, oil change and roadside help — done right when it fits your schedule. <strong>Labor: $100/hr</strong>. <strong>Appointments start after 5:00 PM.</strong></p><ul class='bullets'><li>Upfront pricing</li><li>On-site convenience</li><li>Trusted local service</li></ul><a href='#book' class='btn btn-solid'>Book an appointment</a> <a href='/app/' class='btn btn-outline'>Try the App</a></div><div class='hero-card'><h3>Have your parts ready</h3><p class='muted'>Please verify parts fit your vehicle.</p><div class='parts'><h4>Brakes</h4><ul><li>Brake pads (front or rear)</li><li>Rotors ×2 (front or rear)</li><li>Shim/Hardware kit</li></ul><h4>Tune-Up</h4><ul><li>Wiper blades (front & rear if equipped)</li><li>Engine air filter</li><li>Cabin air filter (if equipped)</li><li>Spark plugs (4, 6, or 8)</li></ul></div></div></div></section><section class='services' id='services'><div class='wrap'><h2>Services available</h2><div class='cards'><article class='card'><h3>Brake Service</h3><p>Pad & rotor replacement (front or rear), hardware install, torque to spec, brake-bed guidance.</p></article><article class='card'><h3>Tune-Up</h3><p>Spark plugs, air & cabin filters, wipers. Visual inspection and code scan upon request.</p></article><article class='card'><h3>Oil Change (Customer-Provided)</h3><p>You bring the correct oil grade and filter. We do a clean swap and can dispose of old oil upon request.</p></article><article class='card'><h3>Evening Appointments</h3><p>Weekday slots after 5:00 PM for your convenience. Limited weekend availability.</p></article><article class='card'><h3>Roadside Assistance — Middlesex County</h3><p>Within Middlesex County. Outside the county: <strong>$1 per mile</strong> from the county line.</p><ul class='bullets'><li>JUMP STARTS</li><li>FLAT TIRE CHANGE</li></ul></article></div></div></section><section class='booking' id='book'><div class='wrap'><h2>Book an appointment</h2><p class='muted'>Pick a time <strong>after 5:00 PM</strong>. You’ll get a confirmation email after submitting.</p><form action='https://formsubmit.co/honestechservice@gmail.com' method='POST' novalidate><input type='hidden' name='_subject' value='New Booking Request — Honestech'><input type='hidden' name='_captcha' value='false'><input type='hidden' name='_template' value='table'><input type='hidden' name='_next' value='https://honestechservice.com/thankyou.html'><div class='grid'><div class='field'><label for='name'>Full name</label><input id='name' name='name' required autocomplete='name'></div><div class='field'><label for='phone'>Phone</label><input id='phone' name='phone' inputmode='tel' placeholder='(###) ###-####' required></div><div class='field'><label for='email'>Email</label><input id='email' name='email' type='email' autocomplete='email' required></div><div class='field'><label for='service'>Service</label><select id='service' name='service' required><option value=''>Select a service</option><option>Brake Service (Front)</option><option>Brake Service (Rear)</option><option>Tune-Up</option><option>Oil Change (Customer provides oil & filter)</option><option>Diagnostic / Inspection</option><option>Roadside Assistance — Jump Start</option><option>Roadside Assistance — Flat Tire Change</option></select></div><div class='field'><label for='vehicle'>Vehicle (Year · Make · Model)</label><input id='vehicle' name='vehicle' placeholder='e.g., 2016 Lexus IS 300' required></div><div class='field'><label for='address'>Service address</label><input id='address' name='address' placeholder='Street, City, ZIP' required></div><div class='field'><label for='date'>Preferred date</label><input id='date' name='date' type='date' required></div><div class='field'><label for='time'>Preferred time (after 5:00 PM)</label><input id='time' name='time' type='time' step='1800' required></div><div class='field field-span'><label for='notes'>Notes</label><textarea id='notes' name='notes' rows='4' placeholder='Anything we should know?'></textarea></div></div><div class='actions'><button type='submit' class='btn btn-solid'>Request appointment</button><button type='reset' class='btn btn-ghost'>Clear</button></div><p class='muted small'>Roadside outside Middlesex County is billed at <strong>$1 per mile</strong> from the county line.</p></form></div></section></main><footer class='site-footer'><div class='wrap footer-grid'><div><h4>Contact</h4><p><a href='tel:+17329373734'>(732) 937-3734</a><br><a href='mailto:honestechservice@gmail.com'>honestechservice@gmail.com</a></p></div><div><h4>Hours</h4><p>Weekdays after 5:00 PM · Limited weekends</p></div><div><h4>Service Area</h4><p>See our <a href='/locations.html'>Locations</a> · <a href='/blogs.html'>Blogs</a></p></div></div><p class='copyright'>© <span id='year'></span> Honestech Mobile Mechanic</p></footer><script src='script.js'></script><script>var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();var d=document.getElementById('date');if(d){var t=new Date();t.setHours(0,0,0,0);d.min=t.toISOString().slice(0,10);}var tm=document.getElementById('time');if(tm){tm.value='17:30';}</script></body></html>
+
+<main>
+  <section class='hero'>
+    <div class='wrap hero-grid'>
+      <div>
+        <h2>Expert service at your driveway.</h2>
+        <p>Brake, tune-up, oil change and roadside help — done right when it fits your schedule. <strong>Labor: $100/hr</strong>. <strong>Appointments start after 5:00 PM.</strong></p>
+        <ul class='bullets'><li>Upfront pricing</li><li>On-site convenience</li><li>Trusted local service</li></ul>
+        <a href='#book' class='btn btn-solid'>Book an appointment</a> <a href='/app/' class='btn btn-outline'>Try the App</a>
+      </div>
+      <div class='hero-card'>
+        <h3>Have your parts ready</h3>
+        <p class='muted'>Please verify parts fit your vehicle.</p>
+        <div class='parts'>
+          <h4>Brakes</h4>
+          <ul><li>Brake pads (front or rear)</li><li>Rotors ×2 (front or rear)</li><li>Shim/Hardware kit</li></ul>
+          <h4>Tune-Up</h4>
+          <ul><li>Wiper blades (front & rear if equipped)</li><li>Engine air filter</li><li>Cabin air filter (if equipped)</li><li>Spark plugs (4, 6, or 8)</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='services' id='services'>
+    <div class='wrap'>
+      <h2>Services available</h2>
+      <div class='cards'>
+        <article class='card'><h3>Brake Service</h3><p>Pad & rotor replacement (front or rear), hardware install, torque to spec, brake-bed guidance.</p></article>
+        <article class='card'><h3>Tune-Up</h3><p>Spark plugs, air & cabin filters, wipers. Visual inspection and code scan upon request.</p></article>
+        <article class='card'><h3>Oil Change (Customer-Provided)</h3><p>You bring the correct oil grade and filter. We do a clean swap and can dispose of old oil upon request.</p></article>
+        <article class='card'><h3>Evening Appointments</h3><p>Weekday slots after 5:00 PM for your convenience. Limited weekend availability.</p></article>
+        <article class='card'><h3>Roadside Assistance — Middlesex County</h3><p>Within Middlesex County. Outside the county: <strong>$1 per mile</strong> from the county line.</p>
+          <ul class='bullets'><li>JUMP STARTS</li><li>FLAT TIRE CHANGE</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class='booking' id='book'>
+    <div class='wrap'>
+      <h2>Book an appointment</h2>
+      <p class='muted'>Pick a time <strong>after 5:00 PM</strong>. You’ll get a confirmation email after submitting.</p>
+
+      <!-- FORM: added hidden fields + changed submit to open modal -->
+      <form id="appointmentForm" action='https://formsubmit.co/honestechservice@gmail.com' method='POST' novalidate>
+        <input type='hidden' name='_subject' id='_subject' value='New Booking Request — Honestech'>
+        <input type='hidden' name='_captcha' value='false'>
+        <input type='hidden' name='_template' value='table'>
+        <input type='hidden' name='_next' value='https://honestechservice.com/thankyou.html'>
+        <!-- NEW: will be set to 'yes' after user agrees -->
+        <input type="hidden" name="agreed_to_terms" id="agreed_to_terms" value="">
+        <!-- NEW: timestamp included in email -->
+        <input type="hidden" name="terms_agreed_at" id="terms_agreed_at" value="">
+
+        <div class='grid'>
+          <div class='field'><label for='name'>Full name</label><input id='name' name='name' required autocomplete='name'></div>
+          <div class='field'><label for='phone'>Phone</label><input id='phone' name='phone' inputmode='tel' placeholder='(###) ###-####' required></div>
+          <div class='field'><label for='email'>Email</label><input id='email' name='email' type='email' autocomplete='email' required></div>
+          <div class='field'><label for='service'>Service</label>
+            <select id='service' name='service' required>
+              <option value=''>Select a service</option>
+              <option>Brake Service (Front)</option>
+              <option>Brake Service (Rear)</option>
+              <option>Tune-Up</option>
+              <option>Oil Change (Customer provides oil & filter)</option>
+              <option>Diagnostic / Inspection</option>
+              <option>Roadside Assistance — Jump Start</option>
+              <option>Roadside Assistance — Flat Tire Change</option>
+            </select>
+          </div>
+          <div class='field'><label for='vehicle'>Vehicle (Year · Make · Model)</label><input id='vehicle' name='vehicle' placeholder='e.g., 2016 Lexus IS 300' required></div>
+          <div class='field'><label for='address'>Service address</label><input id='address' name='address' placeholder='Street, City, ZIP' required></div>
+          <div class='field'><label for='date'>Preferred date</label><input id='date' name='date' type='date' required></div>
+          <div class='field'><label for='time'>Preferred time (after 5:00 PM)</label><input id='time' name='time' type='time' step='1800' required></div>
+          <div class='field field-span'><label for='notes'>Notes</label><textarea id='notes' name='notes' rows='4' placeholder='Anything we should know?'></textarea></div>
+        </div>
+
+        <div class='actions'>
+          <!-- CHANGED: submit -> button that opens modal -->
+          <button type='button' id="openTermsModal" class='btn btn-solid'>Request appointment</button>
+          <button type='reset' class='btn btn-ghost'>Clear</button>
+        </div>
+
+        <p class='muted small'>Roadside outside Middlesex County is billed at <strong>$1 per mile</strong> from the county line.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class='site-footer'>
+  <div class='wrap footer-grid'>
+    <div><h4>Contact</h4><p><a href='tel:+17329373734'>(732) 937-3734</a><br><a href='mailto:honestechservice@gmail.com'>honestechservice@gmail.com</a></p></div>
+    <div><h4>Hours</h4><p>Weekdays after 5:00 PM · Limited weekends</p></div>
+    <div><h4>Service Area</h4><p>See our <a href='/locations.html'>Locations</a> · <a href='/blogs.html'>Blogs</a></p></div>
+  </div>
+  <p class='copyright'>© <span id='year'></span> Honestech Mobile Mechanic · <a href="/honestech-terms.html">Terms &amp; Conditions</a></p>
+</footer>
+
+<!-- TERMS MODAL (drop-in) -->
+<div id="termsModal" class="ht-modal" aria-hidden="true" role="dialog" aria-labelledby="termsTitle" aria-modal="true">
+  <div class="ht-modal__backdrop" data-close="true"></div>
+  <div class="ht-modal__dialog" role="document">
+    <button class="ht-modal__close" aria-label="Close" data-close="true">✕</button>
+
+    <header class="ht-modal__header">
+      <h2 id="termsTitle">Terms &amp; Conditions</h2>
+      <p class="muted small">
+        Please review and confirm to continue.
+        <a href="/honestech-terms.html">Open full Terms</a>.
+      </p>
+    </header>
+
+    <section class="ht-modal__body">
+      <ul class="summary">
+        <li>Labor-only service; customer supplies parts unless arranged otherwise.</li>
+        <li>Payment due at completion via cash or electronic (Zelle, Venmo, etc.). No cards.</li>
+        <li>24-hour cancellation policy; late cancels may incur a service call fee.</li>
+        <li>30-day labor warranty (customer-supplied parts excluded).</li>
+        <li>Safe, accessible work area required (no work on public streets/highways).</li>
+        <li>NJ law; disputes in Middlesex County, NJ.</li>
+      </ul>
+
+      <label class="agree">
+        <input type="checkbox" id="modalAgreeChk" disabled>
+        I have read and agree to the
+        <a href="/honestech-terms.html">Terms &amp; Conditions</a>.
+      </label>
+      <p id="countdown" class="muted small" hidden>You can agree in <span id="secondsLeft">3</span>s…</p>
+    </section>
+
+    <footer class="ht-modal__footer">
+      <button type="button" class="btn-secondary" data-close="true">Cancel</button>
+      <button type="button" id="agreeAndSubmit" class="btn-primary" disabled>Agree &amp; Submit</button>
+    </footer>
+  </div>
+</div>
+
+<script src='script.js'></script>
+
+<!-- Your existing inline script -->
+<script>
+var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
+var d=document.getElementById('date');if(d){var t=new Date();t.setHours(0,0,0,0);d.min=t.toISOString().slice(0,10);}
+var tm=document.getElementById('time');if(tm){tm.value='17:30';}
+</script>
+
+<!-- Modal logic (require link click + 3s delay + timestamp logging) -->
+<script>
+(function(){
+  const form = document.getElementById('appointmentForm');
+  const openBtn = document.getElementById('openTermsModal');
+  const modal = document.getElementById('termsModal');
+  const closeEls = modal.querySelectorAll('[data-close="true"]');
+  const agreeChk = document.getElementById('modalAgreeChk');
+  const agreeBtn = document.getElementById('agreeAndSubmit');
+  const hiddenAgree = document.getElementById('agreed_to_terms');
+  const hiddenTs = document.getElementById('terms_agreed_at');
+  const subj = document.getElementById('_subject');
+  const cd = document.getElementById('countdown');
+  const secondsLeft = document.getElementById('secondsLeft');
+  const link = modal.querySelector('.agree a');
+  const LOCK_KEY = 'ht_terms_accepted_at';
+  const LOCK_DAYS = 30;
+
+  function daysSince(ts){ return (Date.now() - ts) / (1000*60*60*24); }
+
+  function alreadyAccepted(){
+    try {
+      const ts = Number(localStorage.getItem(LOCK_KEY) || 0);
+      return ts && daysSince(ts) < LOCK_DAYS;
+    } catch(e){ return false; }
+  }
+
+  function openModal(){
+    if (alreadyAccepted()){
+      hiddenAgree.value = 'yes';
+      const now = new Date();
+      const iso = now.toISOString();
+      hiddenTs.value = iso;
+      subj.value = 'New Booking Request — Honestech (Terms agreed at: ' + iso + ')';
+      form.submit();
+      return;
+    }
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    agreeChk.checked = false;
+    agreeChk.disabled = true; // disabled until they click link
+    agreeBtn.disabled = true;
+    link.dataset.clicked = "false";
+    cd.hidden = true;
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  function startDelayCountdown(){
+    let t = 3;
+    cd.hidden = false;
+    secondsLeft.textContent = t;
+    agreeBtn.dataset.delayOk = 'false';
+    const timer = setInterval(()=>{
+      t--;
+      secondsLeft.textContent = t;
+      if(t<=0){
+        clearInterval(timer);
+        cd.hidden = true;
+        agreeBtn.dataset.delayOk = 'true';
+        updateAgreeState();
+      }
+    },1000);
+  }
+
+  function updateAgreeState(){
+    const delayOk = agreeBtn.dataset.delayOk === 'true';
+    agreeBtn.disabled = !(agreeChk.checked && delayOk);
+  }
+
+  // Events
+  openBtn?.addEventListener('click', openModal);
+  closeEls.forEach(el=> el.addEventListener('click', closeModal));
+  modal.addEventListener('click', (e)=>{ if(e.target.dataset.close==='true'){ closeModal(); }});
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('is-open')) closeModal(); });
+
+  // Require link click first
+  link.addEventListener('click', ()=>{
+    link.dataset.clicked = "true";
+    agreeChk.disabled = false;
+    startDelayCountdown();
+  });
+
+  agreeChk.addEventListener('change', updateAgreeState);
+
+  agreeBtn.addEventListener('click', ()=>{
+    hiddenAgree.value = 'yes';
+    const now = new Date();
+    const iso = now.toISOString();
+    hiddenTs.value = iso;
+    subj.value = 'New Booking Request — Honestech (Terms agreed at: ' + iso + ')';
+    try { localStorage.setItem(LOCK_KEY, String(Date.now())); } catch(e){}
+    closeModal();
+    form.submit();
+  });
+})();
+</script>
+</body></html>
