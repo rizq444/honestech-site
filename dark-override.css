@@ -1,0 +1,27 @@
+
+/* Force dark — must be loaded LAST */
+html, body {
+  background: #000 !important;
+  color: #eee !important;
+}
+a { color: #ffd000 !important; }
+h1, h2, h3, h4, h5, h6 { color: #eee !important; }
+
+.towns a.town,
+.chip {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.25) !important;
+  color: #eee !important;
+}
+
+.card, section, .content, .container, .panel {
+  background: transparent !important;
+  color: #eee !important;
+  border-color: rgba(255,255,255,.15) !important;
+}
+
+.btn, .btn-yellow {
+  background: #ffd000 !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+}
