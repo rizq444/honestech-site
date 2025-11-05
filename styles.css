@@ -101,3 +101,54 @@ ul.clean{margin:.4rem 0;padding-left:1.1rem}
   .nav-toggle { display:inline-flex; flex-direction:column; gap:4px; }
   .cta { display:none; }          /* hide the inline links on mobile */
 }
+/* ======= MOBILE NAV FIX (pin, layer, lock) ======= */
+:root { --brand: #ffd000; }
+
+html, body { margin: 0; } /* prevent stray margins */
+.site-header { position: relative; z-index: 1200; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+/* Buttons */
+.btn{display:inline-block;padding:.55rem .9rem;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid var(--brand);color:var(--brand);}
+.btn:hover{opacity:.9;}
+.btn-solid{background:var(--brand);color:#000;border:1px solid #000;}
+
+/* Hamburger */
+.nav-toggle{display:none;background:transparent;border:0;padding:10px;cursor:pointer;}
+.nav-toggle .bar{display:block;width:22px;height:2px;background:var(--brand);}
+@media (max-width:860px){
+  .nav-toggle{display:inline-flex;flex-direction:column;gap:4px;}
+  .cta{display:none;} /* hide inline links on mobile */
+}
+
+/* Panel + Backdrop (fixed, layered) */
+.nav-panel[hidden]{display:none;}
+.nav-panel{
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  margin-top: 52px;             /* sits under header button */
+  min-width: 280px;
+  max-width: 92vw;
+  background:#000;
+  color:#eee;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 12px 24px rgba(0,0,0,.6);
+  z-index: 1100;
+}
+.nav-panel a{display:block;padding:8px 10px;color:#eee;text-decoration:none;}
+.nav-panel a.btn{margin-top:6px;}
+
+/* dark overlay behind menu */
+.nav-backdrop[hidden]{display:none;}
+.nav-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 1000;
+}
+
+/* Prevent scroll when menu open */
+body.no-scroll { overflow: hidden; }
