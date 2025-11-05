@@ -61,3 +61,43 @@ ul.clean{margin:.4rem 0;padding-left:1.1rem}
 .kicker{font-size:12px;color:#444}
 .badge{display:inline-block;background:var(--brand);border:1px solid #000;border-radius:999px;padding:.1rem .55rem;font-weight:800;font-size:12px}
 .table-note{font-size:12px;color:#555;margin:6px 2px 0}
+/* ===== Honestech header + buttons (mobile-first) ===== */
+:root { --brand:#ffd000; }
+
+/* Buttons */
+.btn {
+  display:inline-block; padding:.55rem .9rem; border-radius:10px;
+  text-decoration:none; font-weight:700; border:1px solid var(--brand);
+  color:var(--brand);
+}
+.btn:hover { opacity:.9; }
+.btn-solid {
+  background:var(--brand); color:#000; border:1px solid #000;
+}
+
+/* Hamburger button (hidden on desktop) */
+.nav-toggle { display:none; background:transparent; border:0; padding:8px; }
+.nav-toggle .bar { display:block; width:22px; height:2px; background:var(--brand); }
+.site-header { position:relative; z-index:1000; }
+
+/* Inline links row (desktop only) */
+.cta { display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Mobile nav panel + backdrop (only used on small screens) */
+.nav-panel[hidden] { display:none; }
+.nav-panel {
+  position:absolute; right:16px; top:66px; min-width:260px;
+  background:#000; color:#eee; border:1px solid rgba(255,255,255,.15);
+  border-radius:12px; padding:12px; box-shadow:0 12px 24px rgba(0,0,0,.6);
+}
+.nav-panel a { display:block; padding:8px 10px; color:#eee; text-decoration:none; }
+.nav-backdrop[hidden] { display:none; }
+.nav-backdrop {
+  position:fixed; inset:0; background:rgba(0,0,0,.4);
+}
+
+/* --- Responsive rules --- */
+@media (max-width: 860px){
+  .nav-toggle { display:inline-flex; flex-direction:column; gap:4px; }
+  .cta { display:none; }          /* hide the inline links on mobile */
+}
