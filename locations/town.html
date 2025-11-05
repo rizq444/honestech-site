@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,10 +8,10 @@
   <meta name="theme-color" content="#ffd000" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/locations/styles-locations-additions.css" />
-  <link rel="stylesheet" href="/locations/dark-override.css?v=3" />
+  <link rel="stylesheet" href="/locations/dark-override.css?v=5" />
 </head>
 <body>
-  
+
 <header class="site-header">
   <div class="wrap">
     <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
@@ -26,7 +27,7 @@
     <nav id="navPanel" class="nav-panel" hidden>
       <a href="/">Home</a>
       <a href="/about.html">About</a>
-      <a href="/locations.html">Locations</a>
+      <a href="/locations/locations.html">Locations</a>
       <a href="/blog.html">Blogs</a>
       <a href="/pay.html">Pay Now</a>
       <a href="tel:17329373734">Call</a>
@@ -59,7 +60,7 @@
       <div class="btns">
         <a class="btn-yellow" href="tel:17329373734">Call Now</a>
         <a class="btn-yellow" href="/services.html">Service Menu</a>
-        <a class="chip" href="/locations.html">← Back to Locations</a>
+        <a class="chip" href="/locations/locations.html">← Back to Locations</a>
       </div>
     </section>
   </main>
@@ -69,9 +70,9 @@
     const countyKey = params.get('county') || '';
     const townSlug = params.get('town') || '';
     const lists = {
-      middlesex:["Edison","New Brunswick","Piscataway","Woodbridge","Old Bridge","Perth Amboy","South Amboy","Sayreville","South River","East Brunswick","North Brunswick","Highland Park","Metuchen","Carteret","Middlesex Borough","Cranbury","Dunellen","Helmetta","Jamesburg","Milltown","Monroe Township","Plainsboro","South Brunswick","Spotswood"],
-      monmouth:["Asbury Park","Atlantic Highlands","Belmar","Bradley Beach","Brielle","Colts Neck","Deal","Eatontown","Englishtown","Fair Haven","Farmingdale","Freehold","Hazlet","Highlands","Holmdel","Howell","Keansburg","Keyport","Little Silver","Long Branch","Manalapan","Manasquan","Marlboro","Matawan","Middletown","Millstone","Monmouth Beach","Neptune Township","Neptune City","Ocean Township","Oceanport","Red Bank","Rumson","Sea Bright","Sea Girt","Shrewsbury","Spring Lake","Tinton Falls","Union Beach","Upper Freehold","Wall Township","West Long Branch"],
-      ocean:["Toms River","Brick Township","Lakewood","Jackson","Point Pleasant","Point Pleasant Beach","Seaside Heights","Seaside Park","Lavallette","Berkeley (Bayville)","Beachwood","Pine Beach","Ocean Gate","South Toms River","Island Heights","Manchester Township","Plumsted (New Egypt)","Lacey Township (Forked River)","Barnegat","Barnegat Light","Stafford (Manahawkin)","Long Beach Township","Ship Bottom","Surf City","Harvey Cedars","Beach Haven","Little Egg Harbor","Eagleswood"]
+      middlesex: ["Edison", "New Brunswick", "Piscataway", "Woodbridge", "Old Bridge", "Perth Amboy", "South Amboy", "Sayreville", "South River", "East Brunswick", "North Brunswick", "Highland Park", "Metuchen", "Carteret", "Middlesex Borough", "Cranbury", "Dunellen", "Helmetta", "Jamesburg", "Milltown", "Monroe Township", "Plainsboro", "South Brunswick", "Spotswood"],
+      monmouth: ["Asbury Park", "Atlantic Highlands", "Belmar", "Bradley Beach", "Brielle", "Colts Neck", "Deal", "Eatontown", "Englishtown", "Fair Haven", "Farmingdale", "Freehold", "Hazlet", "Highlands", "Holmdel", "Howell", "Keansburg", "Keyport", "Little Silver", "Long Branch", "Manalapan", "Manasquan", "Marlboro", "Matawan", "Middletown", "Millstone", "Monmouth Beach", "Neptune Township", "Neptune City", "Ocean Township", "Oceanport", "Red Bank", "Rumson", "Sea Bright", "Sea Girt", "Shrewsbury", "Spring Lake", "Tinton Falls", "Union Beach", "Upper Freehold", "Wall Township", "West Long Branch"],
+      ocean: ["Toms River", "Brick Township", "Lakewood", "Jackson", "Point Pleasant", "Point Pleasant Beach", "Seaside Heights", "Seaside Park", "Lavallette", "Berkeley (Bayville)", "Beachwood", "Pine Beach", "Ocean Gate", "South Toms River", "Island Heights", "Manchester Township", "Plumsted (New Egypt)", "Lacey Township (Forked River)", "Barnegat", "Barnegat Light", "Stafford (Manahawkin)", "Long Beach Township", "Ship Bottom", "Surf City", "Harvey Cedars", "Beach Haven", "Little Egg Harbor", "Eagleswood"]
     };
     const countyNameMap = { middlesex: "Middlesex County", monmouth: "Monmouth County", ocean: "Ocean County" };
     const list = lists[countyKey] || [];
