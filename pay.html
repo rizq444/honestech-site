@@ -23,14 +23,14 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="site-header">
     <div class="wrap">
       <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <div class="brand">
-        <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech" class="logo" />
+        <img class="logo" src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech">
         <div class="brand-text">
           <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
           <p class="tagline">Honest, reliable service at your driveway.</p>
@@ -41,6 +41,7 @@
         <a class="btn" href="/locations.html">Locations</a>
         <a class="btn" href="/blogs.html">Blogs</a>
         <a class="btn" href="/#book">Book</a>
+        <a class="btn" href="/pay.html">Pay Now</a>
         <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
       </div>
     </div>
@@ -51,13 +52,13 @@
       <a href="/locations.html">Locations</a>
       <a href="/blogs.html">Blogs</a>
       <a href="/#book">Book</a>
+      <a href="/pay.html">Pay Now</a>
       <a href="tel:+17329373734">Call</a>
       <a href="mailto:honestechservice@gmail.com">Email</a>
     </nav>
   </div>
   <div id="navBackdrop" class="nav-backdrop"></div>
 
-  <!-- Content -->
   <main class="pay-wrap">
     <h2>Pay Now</h2>
     <p class="fine">Choose your preferred method. <span class="fee">Stripe Checkout includes a 3% processing fee.</span></p>
@@ -157,23 +158,19 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© <span id="y"></span> Honestech Mobile Mechanic · <a href="mailto:honestechservice@gmail.com">Email</a></p>
+      <p>© 2025 Honestech Mobile Mechanic · <a href="mailto:honestechservice@gmail.com">Email</a></p>
     </div>
   </footer>
 
-  <script src="/script.js"></script>
   <script>
-    // ====== EDIT THESE HANDLES IF NEEDED ======
-    const VENMO_USER = "Honestech";              // @Honestech
-    const CASHAPP_TAG = "Honestech";             // $Honestech
-    const PAYPAL_HANDLE = "honestechservice";    // paypal.me/<handle>
-    const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_eVqeV65A5ahB2K6cDFgUM00"; // provided by you
+    const VENMO_USER = "Honestech";
+    const CASHAPP_TAG = "Honestech";
+    const PAYPAL_HANDLE = "honestechservice";
+    const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_eVqeV65A5ahB2K6cDFgUM00";
 
-    // Helpers
     const $ = (id) => document.getElementById(id);
     const amtEl = $("amount"), noteEl = $("note"), custEl = $("customer");
     const stripeTotalEl = $("stripeTotal");
-    const yEl = $("y"); yEl.textContent = new Date().getFullYear();
 
     function toMoney(n){
       const v = parseFloat((n||"").toString().replace(/[^0-9.]/g,""));
@@ -188,26 +185,21 @@
       const note = (noteEl.value||"").trim();
       const fullNote = encodeURIComponent([ "Honestech Mobile Mechanic", cust && ("— " + cust), note && ("— " + note) ].filter(Boolean).join(" "));
 
-      // Stripe 3% total
       const stripeTotal = Math.round((amt * 1.03) * 100) / 100;
       stripeTotalEl.textContent = "$" + fmt(stripeTotal);
 
-      // Venmo deep link (fallback to web if app not available)
       const venmoDeep = `venmo://paycharge?txn=pay&recipients=${encodeURIComponent(VENMO_USER)}&amount=${amt}&note=${fullNote}`;
       const venmoWeb  = `https://venmo.com/u/${encodeURIComponent(VENMO_USER)}?txn=pay&amount=${amt}&note=${fullNote}`;
-      $("venmoBtn").href = venmoDeep;
-      $("venmoBtn").onclick = (e)=>{ setTimeout(()=>{window.open(venmoWeb,"_blank");}, 600); };
+      document.getElementById("venmoBtn").href = venmoDeep;
+      document.getElementById("venmoBtn").onclick = (e)=>{ setTimeout(()=>{window.open(venmoWeb,"_blank");}, 600); };
 
-      // Cash App
       const cashUrl = `https://cash.app/$${encodeURIComponent(CASHAPP_TAG)}/${amt}?note=${fullNote}`;
-      $("cashappBtn").href = cashUrl;
+      document.getElementById("cashappBtn").href = cashUrl;
 
-      // PayPal
       const paypalUrl = `https://www.paypal.me/${encodeURIComponent(PAYPAL_HANDLE)}/${amt}`;
-      $("paypalBtn").href = paypalUrl;
+      document.getElementById("paypalBtn").href = paypalUrl;
 
-      // Stripe Payment Link (fixed link; amount is shown separately)
-      const stripeBtn = $("stripeBtn");
+      const stripeBtn = document.getElementById("stripeBtn");
       stripeBtn.href = STRIPE_PAYMENT_LINK;
       stripeBtn.title = "Stripe total $" + fmt(stripeTotal) + " (includes 3%)";
     }
