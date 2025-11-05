@@ -1,22 +1,11 @@
 
-/* Locations component styles (inherit root theme) */
+/* Locations component styles */
 :root{ --brand:#ffd000; --ring:rgba(255,255,255,.15); }
-
 .county{ margin:18px 0; }
 .towns{ list-style:none; padding:0; margin:10px 0; display:flex; flex-wrap:wrap; gap:8px; }
-
-/* Town links look like yellow buttons */
 .towns .town{
-  display:inline-block;
-  padding:.45rem .7rem;
-  border-radius:999px;
-  background: var(--brand);
-  color:#000;
-  border:1px solid #000;
-  text-decoration:none;
-  font-weight:700;
+  display:inline-block; padding:.45rem .7rem; border-radius:999px;
+  background: var(--brand); color:#000; border:1px solid #000;
+  text-decoration:none; font-weight:700;
 }
 .towns .town:hover{ opacity:.9; }
-
-/* Optional small label chip (kept neutral) */
-.chip{ display:inline-block; padding:.35rem .6rem; border:1px solid var(--ring); border-radius:999px; color:#eee; }
