@@ -1,78 +1,15 @@
 
-:root{ --brand:#ffd000; --ink:#eee; --bg:#0e0e0e; --muted:#b7b7b7; --ring:rgba(255,255,255,.12); }
-html,body{ background:#000; color:var(--ink); margin:0; font-family:-apple-system, system-ui, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif; }
-.wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
+/* NAV AUTO-CLOSE + HOME PATCH (v23) */
+:root{ --brand:#ffd000; }
 
-/* Header */
-.site-header{ position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--ring); z-index:1200; }
-.site-header .wrap{ display:flex; align-items:center; gap:14px; padding:12px 16px; }
-.brand{ display:flex; align-items:center; gap:12px; }
-.logo{ height:40px; width:auto; }
-.brand-text h1{ margin:0; font-size:24px; line-height:1; font-weight:800; letter-spacing:.2px; }
-.brand-text h1 span{ font-weight:700; font-size:20px; }
-.tagline{ margin:.25rem 0 0; color:var(--muted); }
-
-/* Buttons */
-.btn{ display:inline-block; padding:.52rem .9rem; border-radius:10px; text-decoration:none; font-weight:700;
-      border:1px solid var(--brand); color:var(--brand); }
-.btn:hover{ opacity:.9; }
-.btn-solid{ background:var(--brand); color:#000; border:1px solid #000; }
-
-/* Desktop nav */
-.cta{ display:flex; gap:10px; margin-left:auto; flex-wrap:wrap; }
-/* Hamburger */
-.nav-toggle{ display:none; background:transparent; border:0; padding:10px; cursor:pointer; }
-.nav-toggle .bar{ display:block; width:22px; height:2px; background:var(--brand); }
-
-/* Mobile nav */
-.nav-panel[hidden]{ display:none; }
-.nav-panel{ position:fixed; right:12px; top:12px; margin-top:52px; min-width:280px; max-width:92vw;
-            background:#000; color:#eee; border:1px solid var(--ring); border-radius:12px; padding:12px;
-            box-shadow:0 12px 24px rgba(0,0,0,.6); z-index:1100; }
-.nav-panel a{ display:block; padding:8px 10px; text-decoration:none; color:var(--brand); } /* yellow nav links */
-.nav-backdrop[hidden]{ display:none; }
-.nav-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1000; }
-body.no-scroll{ overflow:hidden; }
-
-/* Hero */
-.hero .wrap{ display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; padding:20px 16px; }
-.hero h2{ font-size:28px; margin:.2rem 0 .6rem; }
-.hero ul{ margin:.6rem 0 1rem 1.25rem; }
-.hero-card{ background:#121212; border:1px solid var(--ring); border-radius:14px; padding:14px; }
-.muted{ color:var(--muted); }
-
-/* Cards */
-.cards{ display:grid; gap:16px; padding:0 16px 12px; }
-.card{ background:#121212; border:1px solid var(--ring); border-radius:16px; padding:16px; }
-
-/* Guide grid */
-.guide-grid{ display:grid; gap:16px; }
-.pill-row{ display:flex; gap:8px; flex-wrap:wrap; margin:.5rem 0; }
-.pill{ display:inline-block; padding:.25rem .5rem; border:1px solid var(--ring); border-radius:999px; }
-
-/* Forms */
-.grid{ display:grid; gap:14px; grid-template-columns: repeat(2, 1fr); }
-.field{ display:flex; flex-direction:column; gap:6px; }
-.field-span{ grid-column: 1 / -1; }
-input, select, textarea{ background:#0c0c0c; border:1px solid var(--ring); border-radius:10px; padding:.6rem .7rem; color:#fff; }
-.actions{ display:flex; gap:10px; margin-top:10px; }
-
-/* Footer */
-.site-footer{ border-top:1px solid var(--ring); padding:18px 0; background:#0a0a0a; }
-.site-footer a{ color:var(--ink); text-decoration:none; } /* keep inline links neutral */
-
-/* Images safe scale */
-img, video, iframe{ max-width:100%; height:auto; display:block; border-radius:10px; }
-
-/* Responsive */
-@media (max-width: 860px){
-  .nav-toggle{ display:inline-flex; flex-direction:column; gap:4px; }
-  .cta{ display:none; } /* hide inline buttons on mobile */
-  .brand-text h1{ font-size:20px; }
-  .brand-text h1 span{ font-size:18px; }
-  .hero .wrap{ grid-template-columns: 1fr; }
-  .grid{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-  .guide-grid{ grid-template-columns: 1fr; }
-  .hero h2{ font-size:22px; }
+.nav-panel{
+  position: fixed;
+  z-index: 1300 !important;   /* above sticky header */
+  top: 64px !important;       /* fully below header */
+  right: 12px !important;
+  margin-top: 0 !important;
 }
+.nav-panel a{ color: var(--brand) !important; }
+.nav-toggle .bar{ background: var(--brand) !important; }
+.btn{ color: var(--brand) !important; border-color: var(--brand) !important; }
+.btn.btn-solid{ background: var(--brand) !important; color:#000 !important; border-color:#000 !important; }
