@@ -1,3 +1,5 @@
-:root{ --brand:#ffd000; --bg:#000; --ink:#eee; --ring:rgba(255,255,255,.15); --muted:#bdbdbd; }
+
+:root{ --brand:#ffd000; --ring:rgba(255,255,255,.15); --muted:#bdbdbd; --ink:#eee; }
+/* No body/header overrides here — keep global theme intact */
 .towns a.town{ transition: transform .05s; }
 .towns a.town:active{ transform: scale(.98); }
