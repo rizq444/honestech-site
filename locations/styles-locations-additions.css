@@ -1,5 +1,16 @@
 
 :root{ --brand:#ffd000; --ring:rgba(255,255,255,.15); --muted:#bdbdbd; --ink:#eee; }
-/* No body/header overrides here — keep global theme intact */
-.towns a.town{ transition: transform .05s; }
-.towns a.town:active{ transform: scale(.98); }
+.tag{ display:inline-block; background:var(--brand,#ffd000); color:var(--ink,#000); padding:.15rem .5rem; border-radius:6px; font-weight:800; }
+.btn-yellow{ display:inline-block; text-decoration:none; color:#000; background:var(--brand,#ffd000); padding:.6rem 1rem; border-radius:10px; border:1px solid #000; font-weight:800; }
+.chip{ display:inline-block; padding:.35rem .6rem; border:1px solid var(--ring,rgba(255,255,255,.25)); border-radius:999px; background:transparent; color:var(--ink,#eee); }
+.towns{ list-style:none; padding:0; margin:10px 0; display:flex; flex-wrap:wrap; gap:8px; }
+.towns a.town{ display:inline-block; padding:.45rem .7rem; background:transparent; border:1px solid var(--ring,rgba(255,255,255,.25)); border-radius:999px; text-decoration:none; color:var(--ink,#eee); }
+.towns a.town:hover{ border-color:var(--brand,#ffd000); }
+.nav-toggle{ background:none; border:0; cursor:pointer; display:inline-flex; flex-direction:column; gap:3px; }
+.nav-toggle .bar{ display:block; width:22px; height:2px; background:var(--ink,#eee); }
+.nav-panel{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+@media (max-width:760px){
+  .nav-panel[hidden]{ display:none; }
+  .nav-panel{ display:block; padding:10px 0; }
+  .nav-panel a{ display:inline-block; margin-right:10px; margin-bottom:6px; }
+}
