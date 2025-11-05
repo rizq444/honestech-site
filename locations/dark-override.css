@@ -1,7 +1,9 @@
 
-/* Force dark + yellow accents if anything conflicts */
-html,body{ background:#000 !important; color:#eee !important; }
-a{ color:#ffd000 !important; }
+/* Safety: enforce brand color on buttons and nav links only */
+:root{ --brand:#ffd000; }
 .btn{ color:#ffd000 !important; border-color:#ffd000 !important; }
 .btn.btn-solid{ background:#ffd000 !important; color:#000 !important; border-color:#000 !important; }
 .nav-toggle .bar{ background:#ffd000 !important; }
+.nav-panel a{ color:#ffd000 !important; }           /* nav links yellow */
+.cta a{ color:#ffd000 !important; }                 /* desktop nav buttons are .btn already */
+.towns .town{ background:#ffd000 !important; color:#000 !important; border-color:#000 !important; }
