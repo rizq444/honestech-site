@@ -1,3 +1,3 @@
-:root{--brand:#ffd000}
-.towns a.town{transition:transform .05s}
-.towns a.town:active{transform:scale(.98)}
+:root{ --brand:#ffd000; --bg:#000; --ink:#eee; --ring:rgba(255,255,255,.15); --muted:#bdbdbd; }
+.towns a.town{ transition: transform .05s; }
+.towns a.town:active{ transform: scale(.98); }
