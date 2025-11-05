@@ -1,5 +1,4 @@
 
-/* HONESTECH Base Theme (dark + yellow buttons/nav) */
 :root{ --brand:#ffd000; --ink:#eee; --bg:#0e0e0e; --muted:#b7b7b7; --ring:rgba(255,255,255,.12); }
 html,body{ background:#000; color:var(--ink); margin:0; font-family:-apple-system, system-ui, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif; }
 .wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
@@ -13,22 +12,24 @@ html,body{ background:#000; color:var(--ink); margin:0; font-family:-apple-syste
 .brand-text h1 span{ font-weight:700; font-size:20px; }
 .tagline{ margin:.25rem 0 0; color:var(--muted); }
 
-/* Buttons (yellow) */
-.btn{ display:inline-block; padding:.52rem .9rem; border-radius:10px; text-decoration:none; font-weight:700; border:1px solid var(--brand); color:var(--brand); }
+/* Buttons */
+.btn{ display:inline-block; padding:.52rem .9rem; border-radius:10px; text-decoration:none; font-weight:700;
+      border:1px solid var(--brand); color:var(--brand); }
 .btn:hover{ opacity:.9; }
 .btn-solid{ background:var(--brand); color:#000; border:1px solid #000; }
 
-/* Desktop nav buttons */
+/* Desktop nav */
 .cta{ display:flex; gap:10px; margin-left:auto; flex-wrap:wrap; }
-
 /* Hamburger */
 .nav-toggle{ display:none; background:transparent; border:0; padding:10px; cursor:pointer; }
 .nav-toggle .bar{ display:block; width:22px; height:2px; background:var(--brand); }
 
-/* Mobile nav panel */
+/* Mobile nav */
 .nav-panel[hidden]{ display:none; }
-.nav-panel{ position:fixed; right:12px; top:12px; margin-top:52px; min-width:280px; max-width:92vw; background:#000; color:#eee; border:1px solid var(--ring); border-radius:12px; padding:12px; box-shadow:0 12px 24px rgba(0,0,0,.6); z-index:1100; }
-.nav-panel a{ display:block; padding:8px 10px; text-decoration:none; color:var(--brand); } /* nav links yellow */
+.nav-panel{ position:fixed; right:12px; top:12px; margin-top:52px; min-width:280px; max-width:92vw;
+            background:#000; color:#eee; border:1px solid var(--ring); border-radius:12px; padding:12px;
+            box-shadow:0 12px 24px rgba(0,0,0,.6); z-index:1100; }
+.nav-panel a{ display:block; padding:8px 10px; text-decoration:none; color:var(--brand); } /* yellow nav links */
 .nav-backdrop[hidden]{ display:none; }
 .nav-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1000; }
 body.no-scroll{ overflow:hidden; }
@@ -66,7 +67,7 @@ img, video, iframe{ max-width:100%; height:auto; display:block; border-radius:10
 /* Responsive */
 @media (max-width: 860px){
   .nav-toggle{ display:inline-flex; flex-direction:column; gap:4px; }
-  .cta{ display:none; }
+  .cta{ display:none; } /* hide inline buttons on mobile */
   .brand-text h1{ font-size:20px; }
   .brand-text h1 span{ font-size:18px; }
   .hero .wrap{ grid-template-columns: 1fr; }

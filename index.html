@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark">
   <title>HONESTECH MOBILE MECHANIC</title>
   <meta name="description" content="Honest, reliable mobile auto service. Book online or call (732) 937-3734.">
-  <link rel="stylesheet" href="/styles.css?v=16">
+  <link rel="stylesheet" href="/styles.css?v=21">
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +24,7 @@
       </div>
       <div class="cta">
         <a class="btn" href="/about.html">About</a>
-        <a class="btn" href="/locations.html">Locations</a>
+        <a class="btn" href="/locations/locations.html">Locations</a>
         <a class="btn" href="/blogs.html">Blogs</a>
         <a class="btn" href="/app/">BOOK NOW</a>
         <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
@@ -32,11 +32,12 @@
     </div>
   </header>
 
+  <!-- MOBILE NAV -->
   <div id="navPanel" class="nav-panel" hidden aria-hidden="true">
     <nav class="nav-menu" aria-label="Site">
       <a href="/">Home</a>
       <a href="/about.html">About</a>
-      <a href="/locations.html">Locations</a>
+      <a href="/locations/locations.html">Locations</a>
       <a href="/blogs.html">Blogs</a>
       <a class="btn" href="/pay.html">Pay Now</a>
       <a href="tel:+17329373734">Call</a>
@@ -59,22 +60,13 @@
           </ul>
           <a href="#book" class="btn btn-solid">Book an appointment</a>
         </div>
-
         <div class="hero-card">
           <h3>Parts</h3>
           <p class="muted">Please make sure the parts you purchase are correct for your vehicle (by VIN or exact year/make/model/engine). If you need help, add a note when booking.</p>
           <h4>Brakes</h4>
-          <ul>
-            <li>Pads</li>
-            <li>Rotors ×2</li>
-            <li>Shim Kit</li>
-          </ul>
+          <ul><li>Pads</li><li>Rotors ×2</li><li>Shim Kit</li></ul>
           <h4>Tune-Up</h4>
-          <ul>
-            <li>Wipers</li>
-            <li>Engine &amp; cabin filters</li>
-            <li>Spark plugs</li>
-          </ul>
+          <ul><li>Wipers</li><li>Engine &amp; cabin filters</li><li>Spark plugs</li></ul>
         </div>
       </div>
     </section>
@@ -82,22 +74,10 @@
     <section class="wrap">
       <h2>Services</h2>
       <div class="cards">
-        <article class="card">
-          <h3>Brake Service</h3>
-          <p>Pads &amp; rotors, and Shim Kit.</p>
-        </article>
-        <article class="card">
-          <h3>Tune-Up</h3>
-          <p>Spark plugs, Engine and Cabin filters, wipers.</p>
-        </article>
-        <article class="card">
-          <h3>Oil Change</h3>
-          <p>Please purchase the oil (correct grade &amp; amount) and oil filter.</p>
-        </article>
-        <article class="card">
-          <h3>Roadside Assistance</h3>
-          <p>Middlesex County; outside County +<strong>$1/mi</strong> from county line.</p>
-        </article>
+        <article class="card"><h3>Brake Service</h3><p>Pads &amp; rotors, and Shim Kit.</p></article>
+        <article class="card"><h3>Tune-Up</h3><p>Spark plugs, Engine and Cabin filters, wipers.</p></article>
+        <article class="card"><h3>Oil Change</h3><p>Please purchase the oil (correct grade &amp; amount) and oil filter.</p></article>
+        <article class="card"><h3>Roadside Assistance</h3><p>Middlesex County; outside County +<strong>$1/mi</strong> from county line.</p></article>
       </div>
     </section>
 
@@ -107,18 +87,14 @@
         <article class="card">
           <img src="https://i.postimg.cc/jjbSLSdh/IMG-5425.png" alt="Brake pads with shim kit and spring clips" loading="lazy">
           <h3>Brake Pads</h3>
-          <ul class="pill-row">
-            <li class="pill">Ceramic</li><li class="pill">Semi-Metallic</li><li class="pill">Organic</li>
-          </ul>
+          <ul class="pill-row"><li class="pill">Ceramic</li><li class="pill">Semi-Metallic</li><li class="pill">Organic</li></ul>
           <p><strong>Ceramic:</strong> quiet, low dust. <strong>Semi-metallic:</strong> stronger bite; may be noisier. <strong>Organic:</strong> softer, budget option.</p>
           <p class="muted" style="margin:.3rem 0 0;">Example pads with shim kit &amp; spring clips — hardware helps prevent noise and keeps pads moving freely.</p>
         </article>
         <article class="card">
           <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" alt="Example brake rotors for daily driving" loading="lazy">
           <h3>Brake Rotors</h3>
-          <ul class="pill-row">
-            <li class="pill">Solid / Vented</li><li class="pill">Drilled</li><li class="pill">Slotted</li>
-          </ul>
+          <ul class="pill-row"><li class="pill">Solid / Vented</li><li class="pill">Drilled</li><li class="pill">Slotted</li></ul>
           <p><strong>Vented:</strong> most common; helps cooling. <strong>Drilled/Slotted:</strong> usually not needed for daily cars — use what your vehicle is designed for.</p>
           <p class="muted" style="margin:.3rem 0 0;">Example rotors — choose the type your vehicle is designed for.</p>
         </article>
@@ -142,8 +118,7 @@
           <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
           <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" inputmode="tel" placeholder="(###) ###-####" required></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
-          <div class="field">
-            <label for="service">Service</label>
+          <div class="field"><label for="service">Service</label>
             <select id="service" name="service" required>
               <option value="">Select</option>
               <option>Brake Service (Front)</option>
@@ -160,21 +135,18 @@
           <div class="field"><label for="time">Preferred time (after 5:00 PM)</label><input id="time" name="time" type="time" step="1800" required></div>
           <div class="field field-span"><label for="notes">Notes</label><textarea id="notes" name="notes" rows="4"></textarea></div>
         </div>
-        <div class="actions">
-          <button class="btn btn-solid">Request appointment</button>
-          <button type="reset" class="btn">Clear</button>
-        </div>
+        <div class="actions"><button class="btn btn-solid">Request appointment</button><button type="reset" class="btn">Clear</button></div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2025 Honestech Mobile Mechanic · <a href="/locations.html">Service Areas</a> · <a href="mailto:honestechservice@gmail.com">Email</a></p>
+      <p>© 2025 Honestech Mobile Mechanic · <a href="/locations/locations.html">Service Areas</a> · <a href="mailto:honestechservice@gmail.com">Email</a></p>
     </div>
   </footer>
 
-  <script src="/script.js?v=16"></script>
+  <script src="/script.js?v=21"></script>
   <script>
     const d=document.getElementById('date');
     if(d){ const t=new Date(); t.setHours(0,0,0,0); d.min=t.toISOString().slice(0,10); }
