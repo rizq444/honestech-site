@@ -1,4 +1,4 @@
-<script>
+
 (function(){
   var btn = document.getElementById('navToggle');
   var panel = document.getElementById('navPanel');
@@ -24,7 +24,6 @@
     open ? closeNav() : openNav();
   });
   backdrop.addEventListener('click', closeNav);
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav(); });
-  panel.addEventListener('click', function(e){ if(e.target.tagName === 'A') closeNav(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
+  panel.addEventListener('click', function(e){ if(e.target.tagName==='A') closeNav(); });
 })();
-</script>

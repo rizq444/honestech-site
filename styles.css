@@ -1,154 +1,75 @@
 
-:root{
-  --brand: #ffd000;
-  --ink:#111;
-  --bg:#fff;
-  --muted:#6b7280;
-  --ring: rgba(0,0,0,.08);
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
+/* HONESTECH Base Theme (dark + yellow) */
+:root{ --brand:#ffd000; --ink:#eee; --bg:#0e0e0e; --muted:#b7b7b7; --ring:rgba(255,255,255,.12); }
+html,body{ background:#000; color:var(--ink); margin:0; font-family:-apple-system, system-ui, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif; }
+.wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
 
 /* Header */
-.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--ring);z-index:5}
-.header-inner{display:flex;align-items:center;gap:14px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{height:50px;width:auto}
-.brand-text h1{margin:.25rem 0;font-size:22px}
-.tag{display:inline-block;background:var(--brand);padding:.15rem .5rem;border-radius:6px;font-weight:800}
-.muted{color:var(--muted);font-size:14px}
-.contact{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn-link{text-decoration:none;color:#000;font-weight:700;border-bottom:2px solid var(--brand)}
-
-/* Grid / Cards */
-.section h2{margin:26px 0 10px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
-@media (max-width:640px){.grid{grid-template-columns:1fr} .contact{margin-left:0}}
-.card{background:#f7f7f7;border:1px solid var(--ring);border-radius:12px;padding:16px}
-.card h3{margin:.2rem 0 .35rem 0;font-size:18px}
-.pill{font-size:12px;padding:.05rem .5rem;border-radius:999px;border:1px solid var(--ring);background:#fff;margin-left:.35rem}
-.price-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;margin:.4rem 0 .2rem;padding:.55rem .75rem;background:#fff;border:1px solid var(--ring);border-radius:10px}
-.price-row.credit{background:#fefbe8}
-.ok{color:#065f46;font-weight:800}
+.site-header{ position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--ring); z-index:1200; }
+.site-header .wrap{ display:flex; align-items:center; gap:14px; padding:12px 16px; }
+.brand{ display:flex; align-items:center; gap:12px; }
+.logo{ height:40px; width:auto; }
+.brand-text h1{ margin:0; font-size:24px; line-height:1; font-weight:800; letter-spacing:.2px; }
+.brand-text h1 span{ font-weight:700; font-size:20px; }
+.tagline{ margin:.25rem 0 0; color:var(--muted); }
 
 /* Buttons */
-.btn-yellow{display:inline-block;text-decoration:none;color:#000;background:var(--brand);padding:.5rem .75rem;border-radius:10px;border:1px solid #000;font-weight:800;white-space:nowrap}
-.btn-ghost{display:inline-block;text-decoration:none;color:#000;background:#fff;padding:.5rem .75rem;border-radius:10px;border:1px solid var(--ring);font-weight:700;white-space:nowrap}
-.big{padding:.8rem 1.1rem;border-radius:12px}
-.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{ display:inline-block; padding:.52rem .9rem; border-radius:10px; text-decoration:none; font-weight:700; border:1px solid var(--brand); color:var(--brand); }
+.btn:hover{ opacity:.9; }
+.btn-solid{ background:var(--brand); color:#000; border:1px solid #000; }
 
-/* Notices */
-.notice{background:#fff;border:2px dashed var(--ring);padding:14px;border-radius:12px;margin-top:12px}
-ul.clean{margin:.4rem 0;padding-left:1.1rem}
-.kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;background:#fff;border:1px solid var(--ring);padding:.05rem .35rem;border-radius:6px;font-size:12px}
+/* Inline nav (desktop) */
+.cta{ display:flex; gap:10px; margin-left:auto; flex-wrap:wrap; }
+.nav-toggle{ display:none; background:transparent; border:0; padding:10px; cursor:pointer; }
+.nav-toggle .bar{ display:block; width:22px; height:2px; background:var(--brand); }
+
+/* Mobile menu */
+.nav-panel[hidden]{ display:none; }
+.nav-panel{ position:fixed; right:12px; top:12px; margin-top:52px; min-width:280px; max-width:92vw; background:#000; color:#eee; border:1px solid var(--ring); border-radius:12px; padding:12px; box-shadow:0 12px 24px rgba(0,0,0,.6); z-index:1100; }
+.nav-panel a{ display:block; padding:8px 10px; color:#eee; text-decoration:none; }
+.nav-backdrop[hidden]{ display:none; }
+.nav-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1000; }
+body.no-scroll{ overflow:hidden; }
+
+/* Hero */
+.hero .wrap{ display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; padding:20px 16px; }
+.hero h2{ font-size:28px; margin:.2rem 0 .6rem; }
+.hero ul{ margin:.6rem 0 1rem 1.25rem; }
+.hero-card{ background:#121212; border:1px solid var(--ring); border-radius:14px; padding:14px; }
+.muted{ color:var(--muted); }
+
+/* Cards */
+.cards{ display:grid; gap:16px; padding:0 16px 12px; }
+.card{ background:#121212; border:1px solid var(--ring); border-radius:16px; padding:16px; }
+
+/* Guide grid */
+.guide-grid{ display:grid; gap:16px; }
+.pill-row{ display:flex; gap:8px; flex-wrap:wrap; margin:.5rem 0; }
+.pill{ display:inline-block; padding:.25rem .5rem; border:1px solid var(--ring); border-radius:999px; }
+
+/* Forms */
+.grid{ display:grid; gap:14px; grid-template-columns: repeat(2, 1fr); }
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field-span{ grid-column: 1 / -1; }
+input, select, textarea{ background:#0c0c0c; border:1px solid var(--ring); border-radius:10px; padding:.6rem .7rem; color:#fff; }
+.actions{ display:flex; gap:10px; margin-top:10px; }
 
 /* Footer */
-.site-footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--ring);font-size:14px;color:var(--muted)}
+.site-footer{ border-top:1px solid var(--ring); padding:18px 0; background:#0a0a0a; }
+.site-footer a{ color:var(--brand); text-decoration:none; }
 
-/* Print */
-@media print{
-  .site-header,.btn-yellow,.btn-ghost,.cta{display:none}
-  body{background:#fff}
-  .card{break-inside:avoid}
-}
+/* Images safe scale */
+img, video, iframe{ max-width:100%; height:auto; display:block; border-radius:10px; }
 
-/* Local additions */
-.rate-banner{background:#fffbe6;border:1px solid rgba(0,0,0,.08);border-left:6px solid var(--brand);padding:10px 12px;border-radius:10px;margin-top:10px}
-.rate-banner b{font-size:18px;}
-.small{font-size:13px;color:#6b7280}
-.kicker{font-size:12px;color:#444}
-.badge{display:inline-block;background:var(--brand);border:1px solid #000;border-radius:999px;padding:.1rem .55rem;font-weight:800;font-size:12px}
-.table-note{font-size:12px;color:#555;margin:6px 2px 0}
-/* ===== Honestech header + buttons (mobile-first) ===== */
-:root { --brand:#ffd000; }
-
-/* Buttons */
-.btn {
-  display:inline-block; padding:.55rem .9rem; border-radius:10px;
-  text-decoration:none; font-weight:700; border:1px solid var(--brand);
-  color:var(--brand);
-}
-.btn:hover { opacity:.9; }
-.btn-solid {
-  background:var(--brand); color:#000; border:1px solid #000;
-}
-
-/* Hamburger button (hidden on desktop) */
-.nav-toggle { display:none; background:transparent; border:0; padding:8px; }
-.nav-toggle .bar { display:block; width:22px; height:2px; background:var(--brand); }
-.site-header { position:relative; z-index:1000; }
-
-/* Inline links row (desktop only) */
-.cta { display:flex; gap:10px; flex-wrap:wrap; }
-
-/* Mobile nav panel + backdrop (only used on small screens) */
-.nav-panel[hidden] { display:none; }
-.nav-panel {
-  position:absolute; right:16px; top:66px; min-width:260px;
-  background:#000; color:#eee; border:1px solid rgba(255,255,255,.15);
-  border-radius:12px; padding:12px; box-shadow:0 12px 24px rgba(0,0,0,.6);
-}
-.nav-panel a { display:block; padding:8px 10px; color:#eee; text-decoration:none; }
-.nav-backdrop[hidden] { display:none; }
-.nav-backdrop {
-  position:fixed; inset:0; background:rgba(0,0,0,.4);
-}
-
-/* --- Responsive rules --- */
+/* Responsive */
 @media (max-width: 860px){
-  .nav-toggle { display:inline-flex; flex-direction:column; gap:4px; }
-  .cta { display:none; }          /* hide the inline links on mobile */
+  .nav-toggle{ display:inline-flex; flex-direction:column; gap:4px; }
+  .cta{ display:none; } /* hide inline links on mobile */
+  .brand-text h1{ font-size:20px; }
+  .brand-text h1 span{ font-size:18px; }
+  .hero .wrap{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+  .guide-grid{ grid-template-columns: 1fr; }
+  .hero h2{ font-size:22px; }
 }
-/* ======= MOBILE NAV FIX (pin, layer, lock) ======= */
-:root { --brand: #ffd000; }
-
-html, body { margin: 0; } /* prevent stray margins */
-.site-header { position: relative; z-index: 1200; }
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
-
-/* Buttons */
-.btn{display:inline-block;padding:.55rem .9rem;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid var(--brand);color:var(--brand);}
-.btn:hover{opacity:.9;}
-.btn-solid{background:var(--brand);color:#000;border:1px solid #000;}
-
-/* Hamburger */
-.nav-toggle{display:none;background:transparent;border:0;padding:10px;cursor:pointer;}
-.nav-toggle .bar{display:block;width:22px;height:2px;background:var(--brand);}
-@media (max-width:860px){
-  .nav-toggle{display:inline-flex;flex-direction:column;gap:4px;}
-  .cta{display:none;} /* hide inline links on mobile */
-}
-
-/* Panel + Backdrop (fixed, layered) */
-.nav-panel[hidden]{display:none;}
-.nav-panel{
-  position: fixed;
-  right: 12px;
-  top: 12px;
-  margin-top: 52px;             /* sits under header button */
-  min-width: 280px;
-  max-width: 92vw;
-  background:#000;
-  color:#eee;
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:12px;
-  padding:12px;
-  box-shadow:0 12px 24px rgba(0,0,0,.6);
-  z-index: 1100;
-}
-.nav-panel a{display:block;padding:8px 10px;color:#eee;text-decoration:none;}
-.nav-panel a.btn{margin-top:6px;}
-
-/* dark overlay behind menu */
-.nav-backdrop[hidden]{display:none;}
-.nav-backdrop{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.45);
-  z-index: 1000;
-}
-
-/* Prevent scroll when menu open */
-body.no-scroll { overflow: hidden; }
