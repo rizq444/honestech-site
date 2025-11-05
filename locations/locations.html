@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Honestech — Service Locations</title>
+  <meta name="theme-color" content="#ffd000">
+  <link rel="stylesheet" href="/styles.css?v=16">
+  <link rel="stylesheet" href="/locations/styles-locations-additions.css?v=1">
+  <link rel="stylesheet" href="/locations/dark-override.css?v=1">
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="wrap">
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand">
+      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" class="logo" alt="Honestech">
+      <div class="brand-text">
+        <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
+        <p class="tagline">Honest, reliable service at your driveway.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="/about.html">About</a>
+      <a class="btn" href="/locations/locations.html">Locations</a>
+      <a class="btn" href="/blogs.html">Blogs</a>
+      <a class="btn" href="/app/">BOOK NOW</a>
+      <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
+    </div>
+  </div>
+</header>
+<div id="navPanel" class="nav-panel" hidden aria-hidden="true">
+  <nav class="nav-menu" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/locations/locations.html">Locations</a>
+    <a href="/blogs.html">Blogs</a>
+    <a class="btn" href="/pay.html">Pay Now</a>
+    <a href="tel:+17329373734">Call</a>
+    <a href="mailto:honestechservice@gmail.com">Email</a>
+    <a href="/app/">Book Now</a>
+  </nav>
+</div>
+<div id="navBackdrop" class="nav-backdrop" hidden></div>
+
+  <main class="wrap" style="padding:20px 16px;">
+    <h2>Service Areas</h2>
+    <p class="muted">Primary coverage in Middlesex, Monmouth, and Ocean County, NJ.</p>
+    <div id="locations-root"></div>
+  </main>
+  <script src="/script.js?v=16"></script>
+  <script src="/locations/locations.js?v=1"></script>
+</body>
+</html>

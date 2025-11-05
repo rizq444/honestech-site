@@ -1,0 +1,7 @@
+
+/* Locations component styles (uses root theme) */
+.county{ margin:18px 0; }
+.towns{ list-style:none; padding:0; margin:10px 0; display:flex; flex-wrap:wrap; gap:8px; }
+.towns .town{ display:inline-block; padding:.45rem .7rem; border:1px solid rgba(255,255,255,.15); border-radius:999px; color:#eee; text-decoration:none; }
+.towns .town:hover{ border-color: var(--brand,#ffd000); }
+.chip{ display:inline-block; padding:.35rem .6rem; border:1px solid rgba(255,255,255,.15); border-radius:999px; }
