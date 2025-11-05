@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HONESTECH — Locations</title>
+  <meta name="theme-color" content="#ffd000" />
+  <link rel="stylesheet" href="styles-locations-additions.css" />
+  <!-- Force-dark is loaded LAST so nothing can override it -->
+  <link rel="stylesheet" href="dark-override.css?v=1" />
+  <style>
+    :root { --brand:#ffd000; }
+    .wrap { max-width:1100px; margin:0 auto; padding:20px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .brand img { height:50px; width:auto; }
+    .tag { display:inline-block; background:var(--brand,#ffd000); color:var(--ink,#000);
+           padding:.15rem .5rem; border-radius:6px; font-weight:800; }
+    .muted { color:var(--muted,#bdbdbd); font-size:14px; }
+    .county { margin:26px 0; }
+    .towns { list-style:none; padding:0; margin:10px 0; display:flex; flex-wrap:wrap; gap:8px; }
+    .towns a.town {
+      display:inline-block; padding:.45rem .7rem; background:transparent;
+      border:1px solid var(--ring,rgba(255,255,255,.25)); border-radius:999px;
+      text-decoration:none; color:var(--ink,#eee);
+    }
+    .towns a.town:hover { border-color:var(--brand,#ffd000); }
+    .btn-yellow {
+      display:inline-block; text-decoration:none; color:var(--ink,#000);
+      background:var(--brand,#ffd000); padding:.6rem 1rem; border-radius:10px;
+      border:1px solid #000; font-weight:800;
+    }
+    header.locations-header { border-bottom:1px solid var(--ring,rgba(255,255,255,.15)); }
+  </style>
+</head>
+<body>
+  <header class="locations-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech Mobile Mechanic Logo" />
+        <div>
+          <div class="tag">HONESTECH MOBILE MECHANIC</div>
+          <h1 style="margin:.25rem 0">Locations We Serve</h1>
+          <div class="muted">Middlesex • Monmouth • Ocean County, NJ</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="locations-root"></div>
+    <section class="county">
+      <a class="btn-yellow" href="/services.html">View Service Menu & Labor Pricing</a>
+    </section>
+  </main>
+
+  <script src="locations.js?v=1"></script>
+</body>
+</html>
