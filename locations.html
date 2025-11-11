@@ -1,67 +1,77 @@
-<!doctype html><html lang='en'><head>
-<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='color-scheme' content='dark'>
-<title>Service Locations – HONESTECH</title>
-<link rel='stylesheet' href='/styles.css'>
-<style>.town-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locations | HONESTECH MOBILE MECHANIC</title>
+  <meta name="theme-color" content="#ffd000">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="wrap">
-      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <div class="brand">
-        <img class="logo" src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech">
-        <div class="brand-text">
-          <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
-          <p class="tagline">Honest, reliable service at your driveway.</p>
-        </div>
-      </div>
-      <div class="cta">
-        <a class="btn" href="/">Home</a>
-        <a class="btn" href="/services.html">Services</a>
-        <a class="btn" href="/locations.html">Locations</a>
-        <a class="btn" href="/blogs.html">Blogs</a>
-        <a class="btn" href="/#book">Book</a>
-        <a class="btn" href="/pay.html">Pay Now</a>
-        <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
-      </div>
-    </div>
-  </header>
-  <div id="navPanel" class="nav-panel" aria-hidden="true">
-    <nav class="nav-menu" aria-label="Site">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">HONESTECH</a>
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="navPanel" class="nav">
       <a href="/">Home</a>
       <a href="/services.html">Services</a>
       <a href="/locations.html">Locations</a>
       <a href="/blogs.html">Blogs</a>
-      <a href="/#book">Book</a>
+      <a href="/app/">Book</a>
       <a href="/pay.html">Pay Now</a>
       <a href="tel:+17329373734">Call</a>
       <a href="mailto:honestechservice@gmail.com">Email</a>
-      <div class="follow">
-        <span class="follow-label">Follow Us</span>
-        
-    <div class="social menu">
-      <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
-      </a>
-      <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
-      </a>
-    </div>
-    
-      </div>
     </nav>
   </div>
-  <div id="navBackdrop" class="nav-backdrop"></div>
+</header>
+<main class="content">
 
-<main class='wrap' style='padding:32px 0;'>
-  <h2>Service Locations</h2>
-  <p class='muted'>Primary coverage in <strong>Middlesex County</strong>, <strong>Monmouth County</strong>, and <strong>Ocean County</strong>.</p>
-  <section style='margin-top:24px'><h3>Middlesex County, NJ</h3><div id='list-middlesex' class='town-grid'></div></section>
-  <section style='margin-top:24px'><h3>Monmouth County, NJ</h3><div id='list-monmouth' class='town-grid'></div></section>
-  <section style='margin-top:24px'><h3>Ocean County, NJ</h3><div id='list-ocean' class='town-grid'></div></section>
+<section class="section">
+  <h1>Service Areas</h1>
+  <p>Primary service area: Middlesex County. $1/mi travel applies outside Middlesex.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Middlesex County</h3>
+      <p>Examples: South River, New Brunswick, East Brunswick, Edison, Woodbridge, Perth Amboy, North Brunswick, Old Bridge.</p>
+    </div>
+    <div class="card">
+      <h3>Monmouth County</h3>
+      <p>Examples: Freehold, Asbury Park, Red Bank, Long Branch, Middletown, Neptune.</p>
+    </div>
+    <div class="card">
+      <h3>Ocean County</h3>
+      <p>Examples: Toms River, Lakewood, Brick, Jackson, Manchester, Barnegat, Lacey, Point Pleasant.</p>
+    </div>
+  </div>
+  <p><a class="btn btn-yellow" href="/app/">Book</a></p>
+</section>
+
 </main>
-<script src='/locations.js'></script><script src='/script.js'></script>
-</body></html>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Service: Middlesex · Monmouth · Ocean County NJ</p>
+    <p><a href="/terms.html">Terms &amp; Conditions</a> · <a href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.instagram.com/honestech_service" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Call/Text: <a href="tel:+17329373734">(732) 937-3734</a></p>
+  </div>
+</footer>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const panel = document.getElementById('navPanel');
+  if (toggle && panel) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      panel.classList.toggle('open');
+    });
+    panel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>

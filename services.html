@@ -3,123 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>Services – HONESTECH</title>
+  <title>Services | HONESTECH MOBILE MECHANIC</title>
+  <meta name="theme-color" content="#ffd000">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="wrap">
-      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <div class="brand">
-        <img class="logo" src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech">
-        <div class="brand-text">
-          <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
-          <p class="tagline">Honest, reliable service at your driveway.</p>
-        </div>
-      </div>
-      <div class="cta">
-        <a class="btn" href="/">Home</a>
-        <a class="btn" href="/services.html">Services</a>
-        <a class="btn" href="/locations.html">Locations</a>
-        <a class="btn" href="/blogs.html">Blogs</a>
-        <a class="btn" href="/#book">Book</a>
-        <a class="btn" href="/pay.html">Pay Now</a>
-        <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
-      </div>
-    </div>
-  </header>
-  <div id="navPanel" class="nav-panel" aria-hidden="true">
-    <nav class="nav-menu" aria-label="Site">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">HONESTECH</a>
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="navPanel" class="nav">
       <a href="/">Home</a>
       <a href="/services.html">Services</a>
       <a href="/locations.html">Locations</a>
       <a href="/blogs.html">Blogs</a>
-      <a href="/#book">Book</a>
+      <a href="/app/">Book</a>
       <a href="/pay.html">Pay Now</a>
       <a href="tel:+17329373734">Call</a>
       <a href="mailto:honestechservice@gmail.com">Email</a>
-      <div class="follow">
-        <span class="follow-label">Follow Us</span>
-        
-    <div class="social menu">
-      <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
-      </a>
-      <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
-      </a>
-    </div>
-    
-      </div>
     </nav>
   </div>
-  <div id="navBackdrop" class="nav-backdrop"></div>
+</header>
+<main class="content">
 
-  <main class="wrap" style="padding:32px 0;">
-    <h1>Mobile Mechanic Services</h1>
-    <p class="muted">Parts are customer‑provided and should be verified by VIN for fitment. Service performed at your driveway or workplace.</p>
+<section class="section">
+  <h1>Services</h1>
+  <div class="grid">
+    <div class="card"><h3>Brakes</h3><p>Pads & rotors.</p></div>
+    <div class="card"><h3>Tune-Up</h3><p>Plugs, filters.</p></div>
+    <div class="card"><h3>Oil Change</h3><p>Full synthetic options.</p></div>
+    <div class="card"><h3>Roadside</h3><p>Jump start, lockout, tire.</p></div>
+  </div>
+  <p><a class="btn btn-yellow" href="/app/">Book</a></p>
+</section>
 
-    <section id="brake-repair" class="card">
-      <h2>Brake Repair &amp; Replacement</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start">
-        <div>
-          <p>On‑site replacement of pads, rotors, and hardware (shims / spring clips). We inspect calipers, slide pins, and fluid condition to ensure safe stopping.</p>
-          <ul>
-            <li>Front/rear pads &amp; rotors</li>
-            <li>Hardware shim kits &amp; anti‑rattle clips</li>
-            <li>Brake fluid checks &amp; basic bleeding as needed</li>
-          </ul>
-          <p class="muted">Please make sure the parts you purchase are correct for your vehicle (verified by VIN).</p>
-        </div>
-        <div>
-          <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" alt="Brake rotors example" style="max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23">
-          <img src="https://i.postimg.cc/dtNCkdbK/IMG-5424.png" alt="Brake hardware shim kit" style="margin-top:10px;max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23">
-          <img src="https://i.postimg.cc/jjbSLSdh/IMG-5425.png" alt="Brake pads example" style="margin-top:10px;max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23">
-        </div>
-      </div>
-    </section>
-
-    <section id="starter-battery" class="card">
-      <h2>Starter &amp; Battery Replacement</h2>
-      <p>Battery testing, replacement, and starter checks when your vehicle won’t crank or has slow starts. We ensure clean terminals and proper cold‑cranking spec.</p>
-    </section>
-
-    <section id="oil-tune" class="card">
-      <h2>Oil Change &amp; Tune‑Ups</h2>
-      <p>Oil &amp; filter changes (customer supplies correct oil &amp; filter), plus spark plugs and coil inspection/replacement for smoother performance.</p>
-    </section>
-
-    <section id="alternator-belts" class="card">
-      <h2>Alternator &amp; Belt Repairs</h2>
-      <p>Charging system checks and component replacement. We also inspect accessory belts and tensioners for squeal, slip, or wear.</p>
-    </section>
-
-    <section id="roadside" class="card">
-      <h2>Emergency Roadside Repairs</h2>
-      <ul>
-        <li>Jump starts</li>
-        <li>Flat tire change</li>
-      </ul>
-      <p class="muted">Outside Middlesex County: $1 per mile from the county line.</p>
-    </section>
-
-    <p style="margin-top:18px"><a class="btn btn-solid" href="/#book">Book a service</a></p>
-  </main>
-
-  <footer class="site-footer"><div class="wrap"><p>© 2025 Honestech Mobile Mechanic · <a href="mailto:honestechservice@gmail.com">Email</a></p>
-    <div class="social footer">
-      <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
-      </a>
-      <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
-      </a>
-    </div>
-    </div></footer>
-  <script src="/script.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Service: Middlesex · Monmouth · Ocean County NJ</p>
+    <p><a href="/terms.html">Terms &amp; Conditions</a> · <a href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.instagram.com/honestech_service" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Call/Text: <a href="tel:+17329373734">(732) 937-3734</a></p>
+  </div>
+</footer>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const panel = document.getElementById('navPanel');
+  if (toggle && panel) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      panel.classList.toggle('open');
+    });
+    panel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
 </body>
 </html>

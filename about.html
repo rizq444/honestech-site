@@ -1,1 +1,63 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='color-scheme' content='dark'><title>About – HONESTECH</title><link rel='stylesheet' href='/styles.css'></head><body><header class='site-header'><div class='wrap'><button id='navToggle' class='nav-toggle' aria-label='Open menu' aria-controls='navPanel' aria-expanded='false'><span class='bar'></span><span class='bar'></span><span class='bar'></span></button><div class='brand'><img src='https://i.postimg.cc/KzPRhDYy/732-937-3734.png' class='logo' alt='Honestech'><div class='brand-text'><h1>HONESTECH<br><span>Mobile Mechanic</span></h1><p class='tagline'>Honest, reliable service at your driveway.</p></div></div><div class='cta'><a class='btn' href='/about.html'>About</a><a class='btn' href='/locations.html'>Locations</a><a class='btn' href='/blogs.html'>Blogs</a><a class='btn' href='/app/'>Book Now</a><a class='btn btn-solid' href='tel:+17329373734'>Call / Text</a></div></div></header><div id='navPanel' class='nav-panel' aria-hidden='true'><nav class='nav-menu' aria-label='Site'><a href='/'>Home</a><a href='/about.html'>About</a><a href='/locations.html'>Locations</a><a href='/blogs.html'>Blogs</a><a href='tel:+17329373734'>Call</a><a href='mailto:honestechservice@gmail.com'>Email</a><a href='/app/'>Book Now</a></nav></div><div id='navBackdrop' class='nav-backdrop'></div><main class='wrap' style='padding:40px 0;'><h2>About Me</h2><p>My name is <strong>Juan Fernandez Jr</strong>, founder of <strong>HONESTECH Mobile Mechanic Service</strong>. I have <strong>27 years</strong> in automotive repair.</p><p>We bring dealership-quality maintenance and repair to people who can’t make it to a shop and rather wait in the best waiting room which is the comfort of your own home. You purchase the parts; We install them for you at an affordable price.</p><p style='margin-top:24px'><a class='btn btn-solid' href='tel:+17329373734'>Call (732) 937-3734</a></p></main><script src='/script.js'></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | HONESTECH MOBILE MECHANIC</title>
+  <meta name="theme-color" content="#ffd000">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">HONESTECH</a>
+    <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="navPanel" class="nav">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/locations.html">Locations</a>
+      <a href="/blogs.html">Blogs</a>
+      <a href="/app/">Book</a>
+      <a href="/pay.html">Pay Now</a>
+      <a href="tel:+17329373734">Call</a>
+      <a href="mailto:honestechservice@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+<main class="content">
+
+<section class="section">
+  <h1>About Honestech</h1>
+  <p>Call/Text: <a href="tel:+17329373734">(732) 937-3734</a> · Email: <a href="mailto:honestechservice@gmail.com">honestechservice@gmail.com</a></p>
+  <p><a class="btn btn-yellow" href="/app/">Book</a></p>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Service: Middlesex · Monmouth · Ocean County NJ</p>
+    <p><a href="/terms.html">Terms &amp; Conditions</a> · <a href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.instagram.com/honestech_service" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Call/Text: <a href="tel:+17329373734">(732) 937-3734</a></p>
+  </div>
+</footer>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const panel = document.getElementById('navPanel');
+  if (toggle && panel) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      panel.classList.toggle('open');
+    });
+    panel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
