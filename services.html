@@ -1,161 +1,109 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Honestech Mobile Mechanic — Service Menu & Labor Pricing</title>
-<meta name="description" content="Honestech Mobile Mechanic labor-only pricing. $120 first hour, $100/hr thereafter. Transparent travel fee with gas & tolls. Middlesex, Monmouth & Ocean County, NJ.">
-<meta name="theme-color" content="#ffd000">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Services – HONESTECH</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    .card{background:#121214;border:1px solid #1f1f23;border-radius:16px;padding:18px;margin-top:16px}
+    .muted{color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
+    .inline-img{max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23}
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <div class="brand">
-      <img src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech Mobile Mechanic Logo" class="logo" />
-      <div class="brand-text">
-        <div class="tag">HONESTECH MOBILE MECHANIC</div>
-        <h1>Service Menu & Labor Pricing</h1>
-        <div class="muted">Middlesex • Monmouth • Ocean County, NJ</div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="brand">
+        <img class="logo" src="https://i.postimg.cc/KzPRhDYy/732-937-3734.png" alt="Honestech">
+        <div class="brand-text">
+          <h1>HONESTECH<br><span>Mobile Mechanic</span></h1>
+          <p class="tagline">Honest, reliable service at your driveway.</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/services.html">Services</a>
+        <a class="btn" href="/locations.html">Locations</a>
+        <a class="btn" href="/blogs.html">Blogs</a>
+        <a class="btn" href="/#book">Book</a>
+        <a class="btn" href="/pay.html">Pay Now</a>
+        <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
       </div>
     </div>
-    <nav class="contact">
-      <a class="btn-link" href="tel:17329373734">📞 (732) 937-3734</a>
-      <a class="btn-link" href="mailto:honestechservice@gmail.com">✉️ honestechservice@gmail.com</a>
+  </header>
+  <div id="navPanel" class="nav-panel" aria-hidden="true">
+    <nav class="nav-menu" aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/locations.html">Locations</a>
+      <a href="/blogs.html">Blogs</a>
+      <a href="/#book">Book</a>
+      <a href="/pay.html">Pay Now</a>
+      <a href="tel:+17329373734">Call</a>
+      <a href="mailto:honestechservice@gmail.com">Email</a>
     </nav>
   </div>
-</header>
+  <div id="navBackdrop" class="nav-backdrop"></div>
 
-<main class="wrap">
-  <section class="section">
-    <div class="rate-banner">
-      <div><span class="badge">BASE LABOR</span></div>
-      <b>$120 for the first hour</b> • <b>$100/hr thereafter</b>
-      <span class="kicker">Billed in 0.25 hr increments. Minimum 1.0 hr for diagnostic/roadside.</span>
-      <div class="small">Labor only — parts not included. Customer can supply parts or we can provide part numbers and links.</div>
-    </div>
-  </section>
+  <main class="wrap" style="padding:32px 0;">
+    <h1>Mobile Mechanic Services</h1>
+    <p class="muted">Parts are customer‑provided and should be verified by VIN for fitment. Service performed at your driveway or workplace.</p>
 
-  <section class="section">
-    <h2>Travel / Dispatch Fee</h2>
-    <div class="notice">
-      <ul class="clean">
-        <li><b>Base dispatch:</b> $25</li>
-        <li><b>Fuel/mileage:</b> $0.85 per mile <span class="kicker">(round trip from nearest service hub)</span></li>
-        <li><b>Tolls:</b> Billed at actual cost (receipt provided)</li>
-        <li><b>Waiver:</b> Dispatch fee waived on labor invoices over <span class="kbd">$180</span></li>
+    <section id="brake-repair" class="card">
+      <h2>Brake Repair &amp; Replacement</h2>
+      <div class="grid2">
+        <div>
+          <p>On‑site replacement of pads, rotors, and hardware (shims / spring clips). We’ll inspect calipers, slide pins, and fluid condition to ensure safe stopping.</p>
+          <ul>
+            <li>Front/rear pads &amp; rotors</li>
+            <li>Hardware shim kits &amp; anti‑rattle clips</li>
+            <li>Brake fluid checks &amp; basic bleeding as needed</li>
+          </ul>
+        </div>
+        <div>
+          <img class="inline-img" src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" alt="Brake rotors example">
+          <img class="inline-img" style="margin-top:10px" src="https://i.postimg.cc/dtNCkdbK/IMG-5424.png" alt="Brake hardware shim kit">
+          <img class="inline-img" style="margin-top:10px" src="https://i.postimg.cc/jjbSLSdh/IMG-5425.png" alt="Brake pads example">
+        </div>
+      </div>
+    </section>
+
+    <section id="starter-battery" class="card">
+      <h2>Starter &amp; Battery Replacement</h2>
+      <p>Battery testing, replacement, and starter checks when your vehicle won’t crank or has slow starts. We’ll ensure clean terminals and proper cold‑cranking spec.</p>
+    </section>
+
+    <section id="oil-tune" class="card">
+      <h2>Oil Change &amp; Tune‑Ups</h2>
+      <p>Oil &amp; filter changes (customer supplies correct oil and filter), plus spark plugs and coil inspection/replacement for smoother performance.</p>
+    </section>
+
+    <section id="alternator-belts" class="card">
+      <h2>Alternator &amp; Belt Repairs</h2>
+      <p>Charging system checks and component replacement. We also inspect accessory belts and tensioners for squeal, slip, or wear.</p>
+    </section>
+
+    <section id="roadside" class="card">
+      <h2>Emergency Roadside Repairs</h2>
+      <ul>
+        <li>Jump starts</li>
+        <li>Flat tire change</li>
+        <li>Minor on‑site fixes to get you moving</li>
       </ul>
-      <div class="small">We’ll quote the estimated travel fee upfront when you book.</div>
-    </div>
-  </section>
+      <p class="muted">Outside Middlesex County: $1 per mile from the county line.</p>
+    </section>
 
-  <section class="section">
-    <h2>Typical Jobs — Fixed Labor (Parts Not Included)</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Oil &amp; Filter Change</h3>
-        <p class="muted">Customer supplies oil &amp; filter; quantity varies by vehicle.</p>
-        <div class="price-row"><span>Labor time</span><b>0.6 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$120</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Oil%20Change%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Brakes — Front Pads (Per Axle)</h3>
-        <p class="muted">Labor only; parts vary by model/brand.</p>
-        <div class="price-row"><span>Labor time</span><b>1.2 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$140</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Front%20Pads%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Brakes — Front Pads + Rotors (Per Axle)</h3>
-        <p class="muted">Labor only; rotor cost varies.</p>
-        <div class="price-row"><span>Labor time</span><b>1.5 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$170</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Front%20Pads%20%2B%20Rotors%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Brakes — Rear Pads (Per Axle)</h3>
-        <p class="muted">Many vehicles have electronic parking brakes (EPB).</p>
-        <div class="price-row"><span>Labor time</span><b>2.0 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$220</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Rear%20Pads%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Brakes — Rear Pads + Rotors (Per Axle)</h3>
-        <p class="muted">Includes EPB service/reset when applicable.</p>
-        <div class="price-row"><span>Labor time</span><b>2.0 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$220</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Rear%20Pads%20%2B%20Rotors%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>OBD-II Diagnostic</h3>
-        <p class="muted">Includes scan &amp; quick findings.</p>
-        <div class="price-row"><span>Minimum labor</span><b>1.0 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price (minimum)</span><b>$120</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Diagnostics%20-%20Labor%20Only">Book</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Serpentine Belt</h3>
-        <p class="muted">Access-dependent.</p>
-        <div class="price-row"><span>Labor time</span><b>1.0 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price</span><b>$120</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Serpentine%20Belt%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-
-      <div class="card">
-        <h3>Tire Plug (Roadside)</h3>
-        <p class="muted">Flat fee; roadside service. No patches.</p>
-        <div class="price-row"><span>Flat fee</span><b>$80</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="table-note">Plug performed when safe and appropriate for repair.</div>
-      </div>
-
-      <div class="card">
-        <h3>Tire Rotation / Wheel Swap</h3>
-        <p class="muted">Ensure wheel lock key is available.</p>
-        <div class="price-row"><span>Flat fee</span><b>$60</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="table-note">Wheel locks required if applicable; torque to spec.</div>
-      </div>
-
-      <div class="card">
-        <h3>Bulbs / Wipers</h3>
-        <p class="muted">Standard bulbs; HID/LED vary by access.</p>
-        <div class="price-row"><span>Minimum labor</span><b>0.4 hr</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-        <div class="price-row"><span>Labor price (minimum)</span><b>$120</b><a class="btn-ghost" href="mailto:honestechservice@gmail.com?subject=Bulbs%20%2F%20Wipers%20-%20Labor%20Only">Get Quote</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Parts Policy</h2>
-    <div class="notice">
-      <ul class="clean">
-        <li><b>Labor-only pricing:</b> All prices shown are labor. <b>Parts are not included.</b></li>
-        <li><b>Your parts or ours:</b> Bring your own parts, or ask us for part numbers and purchase links.</li>
-        <li><b>Quality matters:</b> We recommend OEM/quality aftermarket. We do not mark up parts.</li>
-        <li><b>Returns/warranty:</b> Parts are covered by the seller/manufacturer. Labor workmanship is covered for 30 days.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Payments Accepted</h2>
-    <div class="card">
-      <div class="price-row"><span><b>Cash App</b></span><b>@Honestech</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-      <div class="price-row"><span><b>Venmo</b></span><b>@Honestech</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-      <div class="price-row"><span><b>PayPal</b></span><b>honestechservice@gmail.com</b><a class="btn-yellow" href="tel:17329373734">Request</a></div>
-      <p class="muted" style="margin-top:.6rem">Card payments via Stripe: <b>coming soon</b>.</p>
-    </div>
-    <div class="cta">
-      <a class="btn-yellow big" href="tel:17329373734">Book by Phone</a>
-      <a class="btn-ghost big" href="mailto:honestechservice@gmail.com?subject=Service%20Request%20-%20Honestech&body=Name:%0APhone:%0AVehicle:%0AVIN%20(optional):%0AService%20Needed:%0AParts%20Purchased%20(yes/no):%0APreferred%20Date/Time:%0ALocation:%0A">Book by Email</a>
-      <a class="btn-ghost big" href="services.pdf" download>Download PDF</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    © <span id="y"></span> Honestech Mobile Mechanic — Honest work. No parts markup—labor only.
-  </footer>
-</main>
-
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+    <p style="margin-top:18px"><a class="btn btn-solid" href="/#book">Book a service</a></p>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p>© 2025 Honestech Mobile Mechanic · <a href="mailto:honestechservice@gmail.com">Email</a></p></div></footer>
 </body>
 </html>
