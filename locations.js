@@ -1,12 +1,8 @@
-// Build county lists (including Ocean) and link each to a generic town page
+// Build county lists and link each to a generic town page
 window.HONESTECH_LOCATIONS={
   middlesex:["Edison","Woodbridge","Piscataway","New Brunswick","Old Bridge","East Brunswick","South Brunswick","North Brunswick","Sayreville","Perth Amboy","Carteret","Metuchen","South Plainfield","South River","Milltown","Dunellen","Cranbury","Plainsboro","Jamesburg"].map(n=>({name:n,slug:n.toLowerCase().replace(/[^a-z0-9]+/g,'-')})),
   monmouth:["Middletown","Howell","Marlboro","Manalapan","Freehold","Long Branch","Neptune","Ocean Township","Red Bank","Holmdel","Aberdeen","Hazlet","Wall","Tinton Falls","Eatontown","Shrewsbury","Keyport","Keansburg","Asbury Park","Belmar"].map(n=>({name:n,slug:n.toLowerCase().replace(/[^a-z0-9]+/g,'-')})),
-  ocean:[
-    "Toms River","Brick","Lakewood","Jackson","Manchester","Berkeley Township","Lacey","Stafford","Barnegat","Little Egg Harbor",
-    "Point Pleasant","Point Pleasant Beach","Seaside Heights","Seaside Park","Beachwood","Pine Beach","Ocean Gate","Island Heights",
-    "Bay Head","Lavallette","Mantoloking","Plumsted","Barnegat Light","Harvey Cedars","Surf City","Ship Bottom","Beach Haven","Long Beach Township"
-  ].map(n=>({name:n,slug:n.toLowerCase().replace(/[^a-z0-9]+/g,'-')}))
+  ocean:["Toms River","Brick","Lakewood","Jackson","Manchester","Berkeley Township","Lacey","Stafford","Barnegat","Little Egg Harbor","Point Pleasant","Point Pleasant Beach","Seaside Heights","Seaside Park","Beachwood","Pine Beach","Ocean Gate","Island Heights","Bay Head","Lavallette","Mantoloking","Plumsted","Barnegat Light","Harvey Cedars","Surf City","Ship Bottom","Beach Haven","Long Beach Township"].map(n=>({name:n,slug:n.toLowerCase().replace(/[^a-z0-9]+/g,'-')}))
 };
 
 function buildList(id,key){

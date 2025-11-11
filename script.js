@@ -9,5 +9,6 @@
     (panel.getAttribute('aria-hidden') !== 'false') ? open() : close();
   });
   backdrop && backdrop.addEventListener('click', close);
+  // Close when navigating via panel links
   document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click', close));
 })();

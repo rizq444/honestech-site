@@ -36,5 +36,8 @@ a{color:var(--text);text-decoration:none}
 .field input{background:#0b0b0e;border:1px solid #232329;color:#fff;border-radius:10px;padding:10px}
 .site-footer{border-top:1px solid #1f1f23;margin-top:32px}
 .site-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:64px}
+/* Town buttons – SOLID GOLD */
+.town-btn{display:block;text-align:center;padding:12px;border:2px solid var(--gold);border-radius:12px;background:var(--gold);color:#000;font-weight:700;text-decoration:none}
+.town-btn:hover{filter:brightness(1.05)}
 /* Responsive */
 @media (max-width:980px){ .cta{display:none} }
