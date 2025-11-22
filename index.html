@@ -108,34 +108,32 @@
       <h2>Get Your Quote</h2>
       <p class="muted">Tell us what you need and when you’d like it done. We’ll review your request and get back to you with price and availability. Submitting this form does not confirm an appointment.</p>
       
-      <!-- FORM WIRED TO FORMSUBMIT -->
+      <!-- WIRED TO FORMSUBMIT -->
       <form action="https://formsubmit.co/honestechservice@gmail.com" method="POST">
         <!-- FormSubmit settings -->
         <input type="hidden" name="_subject" value="New Quote Request from Honestech Website">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
+        <!-- Optional: redirect back to home after submit -->
+        <!-- <input type="hidden" name="_next" value="https://honestechservice.com/#book"> -->
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
           <div class="field">
             <label>Full name*</label>
             <input name="name" required placeholder="First and last name">
           </div>
-
           <div class="field">
             <label>Mobile phone*</label>
             <input name="phone" required placeholder="(732) 000-0000">
           </div>
-
           <div class="field">
             <label>ZIP code*</label>
             <input name="zip" required placeholder="e.g., 08816">
           </div>
-
           <div class="field">
             <label>Year / Make / Model*</label>
             <input name="vehicle" required placeholder="2015 Lexus RX350">
           </div>
-
           <div class="field" style="grid-column:1/-1">
             <label>Choose a service*</label>
             <select name="service" required>
@@ -149,22 +147,18 @@
               <option>Diagnostic / other</option>
             </select>
           </div>
-
           <div class="field" style="grid-column:1/-1">
             <label>Describe the issue or work needed</label>
             <textarea name="details" rows="3" placeholder="Tell us what’s going on, any noises, warning lights, or work requested."></textarea>
           </div>
-
           <div class="field">
             <label>Preferred day</label>
             <input name="preferred_date" type="date">
           </div>
-
           <div class="field">
             <label>Preferred time</label>
             <input name="preferred_time" type="time">
           </div>
-
           <div class="field" style="grid-column:1/-1">
             <label>Where did you hear about us?*</label>
             <select name="source" required>
@@ -201,14 +195,19 @@
       </form>
     </section>
 
-    <section class="card" style="margin-top:16px;padding:0;overflow:hidden">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/JNMlOVhGC2c?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&enablejsapi=1"
-          title="Honestech video"
-          allow="autoplay; encrypted-media; picture-in-picture; clipboard-write"
-          allowfullscreen
-          loading="lazy"></iframe>
+    <!-- 🔥 DROPBOX VIDEO MATCHING HONESTECH THEME -->
+    <section class="card" style="margin-top:16px;padding:0;overflow:hidden;border:1px solid #ffd000;background:#111;">
+      <div class="video-wrap" style="position:relative;padding-top:56.25%;background:#000;">
+        <video 
+          controls 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+          <source src="https://www.dropbox.com/scl/fi/jr19etbgx9o9sdwdhjecc/Video-Nov-22-2025-6-25-56-PM.mov?raw=1" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
   </main>
