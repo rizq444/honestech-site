@@ -1,14 +1,1 @@
-
-(function(){
-  const toggle = document.getElementById('navToggle');
-  const panel = document.getElementById('navPanel');
-  const backdrop = document.getElementById('navBackdrop');
-  function close(){ panel.setAttribute('aria-hidden','true'); backdrop.classList.remove('show'); toggle.setAttribute('aria-expanded','false'); }
-  function open(){ panel.setAttribute('aria-hidden','false'); backdrop.classList.add('show'); toggle.setAttribute('aria-expanded','true'); }
-  toggle && toggle.addEventListener('click', ()=>{
-    (panel.getAttribute('aria-hidden') !== 'false') ? open() : close();
-  });
-  backdrop && backdrop.addEventListener('click', close);
-  // Close when navigating via panel links
-  document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click', close));
-})();
+(function(){const t=document.getElementById('navToggle'),e=document.getElementById('navPanel'),n=document.getElementById('navBackdrop');function a(){e.setAttribute('aria-hidden','true'),n.classList.remove('show'),t&&t.setAttribute('aria-expanded','false')}t&&t.addEventListener('click',(()=>{'false'!==e.getAttribute('aria-hidden')?function(){e.setAttribute('aria-hidden','false'),n.classList.add('show'),t&&t.setAttribute('aria-expanded','true')}():a()})),n&&n.addEventListener('click',a),document.querySelectorAll('.nav-menu a').forEach((t=>t.addEventListener('click',a)))})();

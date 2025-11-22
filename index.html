@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <title>HONESTECH – Mobile Mechanic</title>
+  <meta name="description" content="Honestech Mobile Mechanic Service offers on-site auto repair, brake service, oil changes, and roadside help in Middlesex, Monmouth & Ocean County NJ. Get your quote online.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -26,7 +27,7 @@
         <a class="btn" href="/services.html">Services</a>
         <a class="btn" href="/locations.html">Locations</a>
         <a class="btn" href="/blogs.html">Blogs</a>
-        <a class="btn" href="/#book">Book</a>
+        <a class="btn" href="/#book">Get Your Quote</a>
         <a class="btn" href="/pay.html">Pay Now</a>
         <a class="btn btn-solid" href="tel:+17329373734">Call / Text</a>
       </div>
@@ -38,7 +39,7 @@
       <a href="/services.html">Services</a>
       <a href="/locations.html">Locations</a>
       <a href="/blogs.html">Blogs</a>
-      <a href="/#book">Book</a>
+      <a href="/#book">Get Your Quote</a>
       <a href="/pay.html">Pay Now</a>
       <a href="tel:+17329373734">Call</a>
       <a href="mailto:honestechservice@gmail.com">Email</a>
@@ -50,7 +51,7 @@
         <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
       </a>
       <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
+        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
       </a>
     </div>
     
@@ -78,7 +79,7 @@
         <li>Honest, affordable, and transparent pricing.</li>
         <li>Certified technicians with years of hands on experience.</li>
         <li>No towing, no waiting — we fix it where you are.</li>
-        <li>5-star rated service across Middlesex, Monmouth, and Ocean County.</li>
+        <li>Serving Middlesex, Monmouth, and Ocean County, NJ.</li>
       </ul>
     </section>
 
@@ -104,14 +105,47 @@
     </section>
 
     <section id="book" class="card" style="margin-top:16px">
-      <h2>Book Service</h2>
+      <h2>Get Your Quote</h2>
+      <p class="muted">Tell us what you need and when you’d like it done. We’ll review your request and get back to you with price and availability. Submitting this form does not confirm an appointment.</p>
       <form>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-          <div class="field"><label>Name</label><input placeholder="Full name"></div>
-          <div class="field"><label>Phone</label><input placeholder="(732) 000-0000"></div>
-          <div class="field" style="grid-column:1/-1"><label>Service Needed</label><input placeholder="e.g., Front brake pads & rotors"></div>
-          <div class="field"><label>Preferred Date</label><input type="date"></div>
-          <div class="field"><label>Preferred Time</label><input type="time"></div>
+          <div class="field"><label>Full name*</label><input required placeholder="First and last name"></div>
+          <div class="field"><label>Mobile phone*</label><input required placeholder="(732) 000-0000"></div>
+          <div class="field"><label>ZIP code*</label><input required placeholder="e.g., 08816"></div>
+          <div class="field"><label>Year / Make / Model*</label><input required placeholder="2015 Lexus RX350"></div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Choose a service*</label>
+            <select required>
+              <option value="">Select a service</option>
+              <option>Brake pads &amp; rotors</option>
+              <option>Oil change &amp; filter (customer supplies parts)</option>
+              <option>Tune-up / spark plugs</option>
+              <option>Battery or starter issue</option>
+              <option>Roadside – jump start</option>
+              <option>Roadside – flat tire change</option>
+              <option>Diagnostic / other</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Describe the issue or work needed</label>
+            <textarea rows="3" placeholder="Tell us what’s going on, any noises, warning lights, or work requested."></textarea>
+          </div>
+          <div class="field"><label>Preferred day</label><input type="date"></div>
+          <div class="field"><label>Preferred time</label><input type="time"></div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Where did you hear about us?*</label>
+            <select required>
+              <option value="">Select an option</option>
+              <option>Google Search</option>
+              <option>Google Maps</option>
+              <option>TikTok</option>
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>Referral / Friend</option>
+              <option>Returning Customer</option>
+              <option>Other</option>
+            </select>
+          </div>
         </div>
         <div class="card" style="margin-top:12px;">
           <label style="display:flex;gap:8px;align-items:flex-start;">
@@ -126,11 +160,10 @@
             </span>
           </label>
         </div>
-        <button class="btn btn-solid" type="submit" style="margin-top:12px">Submit Request</button>
+        <button class="btn btn-solid" type="submit" style="margin-top:12px;width:100%;max-width:280px">Get My Quote</button>
       </form>
     </section>
 
-    <!-- Minimal YouTube (autoplay muted, responsive) -->
     <section class="card" style="margin-top:16px;padding:0;overflow:hidden">
       <div class="video-wrap">
         <iframe
@@ -152,7 +185,7 @@
         <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
       </a>
       <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
+        <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
       </a>
     </div>
     
