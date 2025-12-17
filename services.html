@@ -50,11 +50,11 @@
       <div class="follow">
         <span class="follow-label">Follow Us</span>
         <div class="social menu">
-          <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank">
+          <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener" aria-label="TikTok">
             <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
           </a>
-          <a class="social-link" href="https://www.instagram.com/honestech_service" target="_blank">
-            <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20z"></path></svg>
+          <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
           </a>
         </div>
       </div>
@@ -67,67 +67,57 @@
   <main class="wrap" style="padding:32px 0;">
     
     <h1>Mobile Mechanic Services</h1>
-    <p class="muted">Parts are customer-provided and must be verified by VIN for correct fitment.</p>
+    <p class="muted">
+      For most services, customers provide parts. If you’re purchasing parts, please double-check fitment using your VIN so everything matches your vehicle.
+    </p>
 
     <!-- ⭐ YELLOW PRICING BANNER -->
-    <section class="card" style="
-      background:#111;
-      border:2px solid #ffd000;
-      padding:16px;
-      margin-top:20px;
-      text-align:center;
-    ">
-      <h2 style="color:#ffd000; margin-bottom:10px;">Honestech Pricing</h2>
-      <p style="font-size:1.1rem;line-height:1.6;">
-        <strong>Labor Rate:</strong> $100/hr (1 hr minimum) <br>
-        <strong>Travel Fee:</strong> $20 <br>
-        <strong>Diagnostic Fee:</strong> Starts at $125 <br>
+    <section class="card" style="background:#111;border:2px solid #ffd000;padding:16px;margin-top:20px;text-align:center;">
+      <h2 style="color:#ffd000; margin-bottom:10px;">Honestech Labor Pricing</h2>
+      <p style="font-size:1.05rem;line-height:1.65;">
+        <strong>Labor:</strong> $100/hr <span class="muted">(1 hour minimum)</span><br>
+        <strong>Travel fee:</strong> $20<br>
+        <strong>Diagnostics:</strong> Starts at $125<br>
         <span class="muted">*Labor only. Parts not included.</span>
       </p>
     </section>
 
-    <!-- NORMAL LABOR SECTION BELOW BANNER -->
-    <section class="card" style="margin-top:16px">
-      <h2>Labor Rates & Pricing</h2>
-      <ul>
-        <li><strong>Labor Rate:</strong> $100/hr (1 hour minimum)</li>
-        <li><strong>Travel Fee:</strong> $20</li>
-        <li><strong>Diagnostic Fee:</strong> Starts at $125</li>
-      </ul>
-      <p class="muted">These rates apply to labor only. Parts must be provided or sourced separately.</p>
-    </section>
-
-    <!-- EXISTING SERVICES BELOW -->
-    <section id="brake-repair" class="card">
+    <!-- SERVICES -->
+    <section id="brake-repair" class="card" style="margin-top:16px;">
       <h2>Brake Repair &amp; Replacement</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;">
         <div>
-          <p>On-site replacement of pads, rotors, and hardware.</p>
+          <p>
+            On-site replacement of pads, rotors, and brake hardware. We also inspect caliper slide pins and overall brake condition to help ensure safe stopping.
+          </p>
           <ul>
-            <li>Front & rear pads</li>
-            <li>Rotors</li>
-            <li>Hardware kits</li>
+            <li>Front &amp; rear brake pads</li>
+            <li>Brake rotors</li>
+            <li>Hardware kits (shims / clips) as needed</li>
           </ul>
+          <p class="muted">Tip: When buying brake parts, verify by VIN to make sure you get the correct kit for your exact trim.</p>
         </div>
         <div>
-          <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" style="max-width:100%;border-radius:10px;">
+          <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" alt="Brake rotors example" style="max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23;">
+          <img src="https://i.postimg.cc/dtNCkdbK/IMG-5424.png" alt="Brake hardware shim kit" style="margin-top:10px;max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23;">
+          <img src="https://i.postimg.cc/jjbSLSdh/IMG-5425.png" alt="Brake pads example" style="margin-top:10px;max-width:100%;height:auto;border-radius:10px;border:1px solid #1f1f23;">
         </div>
       </div>
     </section>
 
     <section id="starter-battery" class="card">
       <h2>Starter &amp; Battery Replacement</h2>
-      <p>Battery testing and starter diagnostics when vehicle will not crank.</p>
+      <p>Battery testing, replacement, and starter checks when your vehicle won’t crank or has slow starts.</p>
     </section>
 
     <section id="oil-tune" class="card">
       <h2>Oil Change &amp; Tune-Ups</h2>
-      <p>Oil & filter (customer-provided), spark plugs, and basic tune-up work.</p>
+      <p>Oil &amp; filter changes (customer supplies correct oil &amp; filter), plus spark plugs and basic tune-up services.</p>
     </section>
 
     <section id="alternator-belts" class="card">
       <h2>Alternator &amp; Belt Repairs</h2>
-      <p>Charging system checks, alternator replacement, and belt tension issues.</p>
+      <p>Charging system checks, alternator replacement, and belt/tensioner inspection for squeal, slip, or wear.</p>
     </section>
 
     <section id="roadside" class="card">
@@ -136,9 +126,10 @@
         <li>Jump starts</li>
         <li>Flat tire changes</li>
       </ul>
+      <p class="muted">Outside Middlesex County: $1 per mile outside the county area.</p>
     </section>
 
-    <!-- UPDATED BUTTON -->
+    <!-- CTA -->
     <p style="margin-top:18px">
       <a class="btn btn-solid" href="/#book">Get Your Quote</a>
     </p>
@@ -150,11 +141,11 @@
     <div class="wrap">
       <p>© 2025 Honestech Mobile Mechanic · <a href="mailto:honestechservice@gmail.com">Email</a></p>
       <div class="social footer">
-        <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank">
+        <a class="social-link" href="https://www.tiktok.com/@honestech.mobile" target="_blank" rel="noopener" aria-label="TikTok">
           <svg viewBox="0 0 48 48" class="icon"><path d="M31 6c2 3 4 5 8 6v6c-3 0-6-1-8-3v13c0 6-5 11-11 11S9 34 9 28s5-11 11-11c1 0 3 0 4 1v6c-1-1-2-1-3-1-3 0-6 3-6 6s3 6 6 6 6-3 6-6V6h4z"></path></svg>
         </a>
-        <a class="social-link" href="https://www.instagram.com/honestech_service" target="_blank">
-          <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20z"></path></svg>
+        <a class="social-link" href="https://www.instagram.com/honestech_service?igsh=cnkwNzdvZmV2b3pm" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 48 48" class="icon"><path d="M16 6h16c5.5 0 10 4.5 10 10v16c0 5.5-4.5 10-10 10H16C10.5 42 6 37.5 6 32V16C6 10.5 10.5 6 16 6zm8 8a10 10 0 100 20 10 10 0 000-20zm12-3a2 2 0 110 4 2 2 0 010-4z"></path></svg>
         </a>
       </div>
     </div>
