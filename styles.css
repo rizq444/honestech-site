@@ -8,3 +8,13 @@
   box-shadow:0 0 0 1px rgba(255,208,0,.15);
 }
 .card-highlight h2{color:var(--gold)}
+
+/* Honeypot anti-spam: invisible to users */
+.hp-field{
+  position:absolute !important;
+  left:-9999px !important;
+  top:auto !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+}
