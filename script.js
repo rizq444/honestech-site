@@ -28,4 +28,15 @@
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
+
+  // Honeypot anti-spam: block submission if the hidden field is filled
+  const quoteForm = document.querySelector('#book form');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+      const hp = quoteForm.querySelector('input[name="company"]');
+      if (hp && hp.value.trim() !== '') {
+        e.preventDefault(); // silently block bots
+      }
+    });
+  }
 })();
